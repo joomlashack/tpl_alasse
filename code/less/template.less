@@ -1,0 +1,164 @@
+
+h1{
+    font-size: 33px;
+}
+h2{
+    font-size: 27px;
+}
+h3{
+    font-size: 24px;
+}
+h4{
+    font-size: 20px;
+}
+h5{
+    font-size: 18px;
+}
+h6{
+    font-size: 16px;
+}
+
+
+#header{
+    background-color: @color_one;
+    color: @color_two;
+    padding: 20px 0;
+}
+
+.dropdown-menu,
+.navbar-inner{
+    .box-shadow(none);
+}
+
+.dropdown-menu{
+    &:before,
+    &:after{
+        display: none;
+    }
+}
+.navbar{
+    .nav{
+        > li{
+            padding-bottom: 13px;
+            padding-top: 13px;
+            > a{
+                border-left: 1px solid @color_two;
+                padding-bottom: 0;
+                padding-top: 0;
+                line-height: @baseFontSize;
+            }
+            &:first-child{
+                >a{
+                    border-left: 0;
+                }
+            }
+
+            > .dropdown-menu{
+                &:before,
+                &:after{
+                    content: none;
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-submenu:hover > a,
+.dropdown-submenu:focus > a{
+    background-image: none;
+}
+
+.nav,
+.navbar-inner,
+.nav .navbar-inner,
+.navbar .nav,
+.navbar .nav .navbar-inner {
+    li.dropdown{
+        .dropdown-menu{
+            li{
+                .sub-menu{
+                    &:before,
+                    &:after{
+                        content: none;
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+dl.tabs.nav {
+    p,
+    h3{
+        margin: 0;
+        a{
+            border: 0;
+            font-size: @baseFontSize;
+        }
+    }
+    + .current{
+        padding: 0 20px;
+        dd.tabs{
+            > h1,> h2,> h3,> h4,> h5,> h6{
+                font-family: @altFontFamily;
+                color: @linkColor;
+            }
+        }
+    }
+}
+.nav.nav-tabs {
+    background-color: @color_one;
+    padding: 0 10px;
+
+    h3,p{
+        a{
+            .border-radius(0);
+            color: @color_two;
+            display: block;
+            padding: 15px 10px;
+        }
+        &:hover,
+        &:focus{
+            background-color: @tabsBackgroundActive;
+            color: @color_two;
+        }
+    }
+
+    .open {
+        h3,p{
+            a{
+                background-color: @tabsBackgroundActive;
+                color: @color_two !important;
+            }
+        }
+    }
+}
+
+
+code{
+    background-color: transparent;
+    border: 0;
+    color: @textColor;
+    font-weight: bold;
+}
+
+div {
+    .bs-docs-example{
+        border: 0;
+        padding-top: 50px;
+        .border-radius(0);
+
+        &:after{
+            .border-radius(0);
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid @bsDocsBorderColor;
+            font-size: @baseFontSize;
+            left: -20px;
+            padding: 7px 280px 7px 20px;
+        }
+    }
+}
