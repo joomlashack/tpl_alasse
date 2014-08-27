@@ -19,22 +19,26 @@ defined('_JEXEC') or die('Restricted access');
 <html>
     <head>
         <w:head />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     </head>
     <body class="<?php echo $responsive ?>">
         <?php if ($this->countModules('toolbar')) : ?>
     	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
         <?php endif; ?>
+
+        <header id="header">
+            <div class="<?php echo $containerClass; ?>">
+            	<div class="<?php echo $gridMode; ?>">
+            		<w:logo name="menu" />
+                    <?php if ($this->countModules('top')) : ?>
+                    <w:module type="none" name="top" chrome="xhtml" />
+                    <?php endif; ?>
+                </div>
+            </div>
+        </header>
+
         <div class="<?php echo $containerClass ?>">
-            <header id="header">
-            	<div class="<?php echo $gridMode; ?> clearfix">
-            		<w:logo name="top" />
-            	</div>
-            </header>
-
-            <?php if ($this->countModules('menu')) : ?>
-       		<w:nav name="menu" />
-            <?php endif; ?>
-
             <?php if ($this->countModules('featured')) : ?>
             <div id="featured">
                 <w:module type="none" name="featured" chrome="xhtml" />
