@@ -12,6 +12,8 @@
 
 @bsDocsBorderColor:     #2C97DE;
 
+@btnPrimaryBackgroundHover: #227FBB;
+
 // Global values
 // --------------------------------------------------
 
@@ -88,33 +90,33 @@
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
+@tableBackgroundAccent:             #D6EAF8; // for striping
+@tableBackgroundHover:              darken(@tableBackgroundAccent, 7%); // for hover
+@tableBorder:                       @color_three; // table and cell border
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         #ccc;
+@btnBackground:                     @grayLight;
+@btnBackgroundHighlight:            @grayLight;
+@btnBorder:                         @grayLight;
 
-@btnPrimaryBackground:              @linkColor;
-@btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
+@btnPrimaryBackground:              @color_one;
+@btnPrimaryBackgroundHighlight:     @btnPrimaryBackground;
 
 @btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackgroundHighlight:        #5bc0de;
 
 @btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackgroundHighlight:     #62c462;
 
 @btnWarningBackground:              lighten(@orange, 15%);
-@btnWarningBackgroundHighlight:     @orange;
+@btnWarningBackgroundHighlight:     @btnWarningBackground;
 
 @btnDangerBackground:               #ee5f5b;
-@btnDangerBackgroundHighlight:      #bd362f;
+@btnDangerBackgroundHighlight:      #ee5f5b;
 
 @btnInverseBackground:              #444;
-@btnInverseBackgroundHighlight:     @grayDarker;
+@btnInverseBackgroundHighlight:     @btnInverseBackground;
 
 
 // Forms
