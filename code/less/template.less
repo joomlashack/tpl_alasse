@@ -1,4 +1,19 @@
 
+.flexbox() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    > [class*="span"]{
+        .box-sizing(border-box);
+        float: none;
+    }
+}
+
+// ----------------------------------------------------------------------------------
+
 h1{
     font-size: 33px;
 }
@@ -23,6 +38,7 @@ h6{
 #header{
     background-color: @color_one;
     color: @color_two;
+    margin: 0;
     padding: 20px 0;
 }
 
@@ -68,6 +84,26 @@ h6{
         }
     }
 }
+
+.is_firefox{
+    .navbar{
+        .nav{
+            > li{
+                > a{
+                    [class^="icon-"], [class*=" icon-"] {
+                        line-height: @baseLineHeight - 6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-inverse .navbar-inner,
+.navbar-inner{
+    border: 0;
+}
+
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
 .dropdown-submenu:hover > a,
@@ -350,9 +386,83 @@ blockquote{
     }
 }
 
+// ----------------------------------------------------------------------------------
+
 .label, .badge {
     font-weight: 400;
     padding-left: 7px;
     padding-right: 7px;
     text-shadow: none;
 }
+
+// ----------------------------------------------------------------------------------
+
+[class*="span"]{
+    padding: 10px;
+    .box-sizing(border-box);
+}
+
+// ----------------------------------------------------------------------------------
+
+.sib2{
+    #sidebar2{
+        background-color: @color_three;
+        color: @color_two;
+    }
+    .bg-sidebar{
+        background-color: @color_three;
+        position: relative;
+
+        .bg-sidebar-inner{
+            background-color: @bodyBackground;
+            height: 100%;
+            position: absolute;
+            width: 50%;
+            z-index: 1;
+        }
+
+        > .container, > .container-fluid{
+            position: relative;
+            z-index: 2;
+        }
+
+        #main-content{
+            .flexbox();
+        }
+
+        #sidebar1,
+        #main{
+            background-color: @bodyBackground;
+        }
+    }
+}
+
+#main-content{
+    margin: 0;
+}
+
+// ----------------------------------------------------------------------------------
+
+.hero-unit{
+    .border-radius(0);
+}
+
+// ----------------------------------------------------------------------------------
+
+#grid-bottom{
+    margin: 0 auto;
+}
+
+#grid-bottom2{
+    background: @color_three;
+    color: @color_two;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#footer{
+    background-image: none;
+    border: 0;
+}
+
+// ----------------------------------------------------------------------------------

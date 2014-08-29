@@ -22,3 +22,4 @@ $responsive = ' responsive';
 if ($responsivePage == 0) {
     $responsive = ' no-responsive';
 }
+$sidebar2_exist = ($this->countModules('sidebar2')) ? ' sib2' : '' ;
