@@ -106,6 +106,13 @@
 				</field>
                 <!-- End of default Wright params -->
 			</fieldset>
+			<fieldset name="Elear">
+				<field name="grid_bottom_full_width_mode" type="list" default="0"
+					label="TPL_JS_GB_FULL_WIDTH_MODE" description="TPL_JS_GB_FULL_WIDTH_MODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+			</fieldset>
 		</fields>
 	</config>
 </extension>
