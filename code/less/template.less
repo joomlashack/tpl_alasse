@@ -60,6 +60,11 @@ h6{
     &:after{
         display: none;
     }
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus{
+        background-image: none;
+    }
 }
 .navbar{
     .nav{
@@ -78,14 +83,66 @@ h6{
                 }
             }
 
+            &.active{
+                > a{
+                    .box-shadow(none);
+                    &:hover,
+                    &:focus{
+                        .box-shadow(none);
+                    }
+                }
+            }
+
+            &.divider-vertical{
+                border-left-color: @color_two;
+                border-right-color: @color_two;
+                padding: 0;
+            }
+
             > .dropdown-menu{
                 &:before,
                 &:after{
                     content: none;
                     display: none;
                 }
+
+                > li{
+                    &:hover{
+                        > a{
+                            background-color: @dropdownLinkBackgroundHover;
+                        }
+                    }
+
+                    .sub-menu{
+                        background-color: @dropdownLinkBackgroundHover;
+
+                        > li{
+                            &:hover{
+                                >a{
+                                    background-color: @submenuLinkBackgroundHover;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.navbar-inverse{
+    .nav{
+        .dropdown-menu{
+            > .active > a,
+            > .active > a:hover,
+            > .active > a:focus{
+                background-color: @dropdownLinkBackgroundActive;
             }
         }
+    }
+    .navbar-inner{
+        background-image: none;
     }
 }
 
@@ -108,6 +165,17 @@ h6{
     border: 0;
 }
 
+.brand{
+    &:hover{
+        color: @color_two;
+    }
+}
+
+.nav-header{
+    color: @textColor;
+    text-shadow: none;
+}
+
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus,
 .dropdown-submenu:hover > a,
@@ -124,11 +192,15 @@ h6{
         .dropdown-menu{
             li{
                 .sub-menu{
+                    position: relative;
+                    top: -25px;
+
                     &:before,
                     &:after{
                         content: none;
                         display: none;
                     }
+
                 }
             }
         }
@@ -200,7 +272,16 @@ dl.tabs.nav {
                 background-color: @tabsBackgroundActive;
                 color: @color_two;
                 text-decoration: none;
+
+                [class^="icon-"], [class*=" icon-"] {
+                    color: inherit;
+                }
             }
+
+            [class^="icon-"], [class*=" icon-"] {
+                color: inherit;
+            }
+
         }
         &.active{
             > a{
@@ -245,6 +326,14 @@ dl.tabs.nav {
     .nav.nav-tabs{
         padding-left: 0;
         padding-right: 0;
+
+        > li {
+            > a{
+                .caret{
+                    margin-top: 20px;
+                }
+            }
+        }
     }
 }
 
@@ -409,6 +498,44 @@ blockquote{
 .well{
     .box-shadow(none);
     color: @textColor;
+
+    .nav{
+        li{
+            &.dropdown{
+                .dropdown-menu{
+                    li{
+                        a{
+                            color: @textColor;
+                            &:hover,
+                            &:focus{
+                                color: @dropdownLinkColorHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.nav-pills{
+            li{
+                &.dropdown{
+                    .dropdown-menu{
+                        li{
+                            a{
+                                &:hover,
+                                &:focus{
+                                    color: @grayLight;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.img-polaroid{
+    .box-sizing(border-box);
 }
 
 // ----------------------------------------------------------------------------------
