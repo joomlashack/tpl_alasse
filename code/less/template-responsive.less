@@ -1,0 +1,90 @@
+
+@media (max-width: 979px) {
+    #menu,
+    .nav-collapse .nav{
+        margin-bottom: 0;
+    }
+
+    #menu{
+        padding: 0;
+    }
+
+    .navbar-inner{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
+        font-weight: 400;
+    }
+    .navbar {
+        margin-bottom: 0;
+        .nav {
+            >li {
+                padding: 0;
+
+                >a {
+                    border-bottom: 1px solid @color_two;
+                    border-left: 0;
+                    .border-radius(0);
+                    font-weight: 400;
+                }
+
+                &:last-child{
+                    > a{
+                        border-bottom: 0;
+                    }
+                }
+
+                &.dropdown{
+                    .dropdown-menu{
+                        li {
+                            &:hover {
+                                >a{
+                                    background-color: transparent;
+                                }
+                            }
+                            > a{
+                                &:hover,
+                                &:focus{
+                                    background-color: transparent;
+                                }
+                            }
+
+                            &.active{
+                                > a{
+                                    &:hover,
+                                    &:focus{
+                                        background-color: @dropdownLinkBackgroundActive;
+                                    }
+                                }
+                            }
+
+                            .sub-menu{
+                                li{
+                                    &:hover{
+                                        > a{
+                                            background-color: transparent;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #toolbar{
+        .navbar .container{
+            width: 720px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    #header{
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
