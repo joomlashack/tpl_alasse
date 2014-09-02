@@ -140,6 +140,21 @@ h6{
                 background-color: @dropdownLinkBackgroundActive;
             }
         }
+
+    }
+    .navbar-inner,
+    .nav .navbar-inner,
+    .navbar .nav,
+    .navbar .nav .navbar-inner{
+        li.dropdown .dropdown-menu li>a{
+            &:hover,
+            &:focus {
+                .caret{
+                    border-bottom-color: transparent;
+                    border-top-color: transparent;
+                }
+            }
+        }
     }
     .navbar-inner{
         background-image: none;
@@ -199,6 +214,151 @@ h6{
                         display: none;
                     }
 
+                }
+            }
+        }
+    }
+}
+
+.module{
+    .nav{
+        li.dropdown{
+            .dropdown-menu{
+                li{
+                   > a{
+                        color : @textColor;
+                        padding-left: 15px;
+                        padding-right: 15px;
+
+                        > [class^="icon-"],
+                        > [class*=" icon-"] {
+                            color: inherit;
+                        }
+
+                        .caret{
+                            border-top-color: @textColor;
+                        }
+
+                        &:hover, &:focus{
+                            color: @dropdownLinkColorHover;
+                        }
+                    }
+                }
+            }
+        }
+        &.nav-tabs{
+            li.dropdown{
+                .dropdown-menu{
+                    padding: 0 16px;
+
+                    li{
+                        > a{
+                            color: @dropdownLinkColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .tabbable{
+        .nav{
+            li{
+                &.dropdown{
+                    .dropdown-menu{
+                        li{
+                            > a{
+                                .caret{
+                                    border-top-color: @dropdownLinkColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#sidebar2{
+    .module{
+        .nav{
+            li.dropdown{
+                .dropdown-menu{
+                    li{
+                       > a{
+                            color : @white;
+
+                            > [class^="icon-"],
+                            > [class*=" icon-"] {
+                                color: inherit;
+                            }
+
+                            .caret{
+                                border-top-color: @color_two ;
+                            }
+
+                            &:hover, &:focus{
+                                color: @dropdownLinkColorHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .well{
+            .nav{
+                li{
+                    &.dropdown{
+                        .dropdown-menu{
+                            li{
+                                a{
+                                    color: @textColor;
+
+                                    .caret{
+                                        border-top-color: @color_two ;
+                                    }
+
+                                    &:hover,
+                                    &:focus{
+                                        color: @dropdownLinkColorHover;
+                                        .caret{
+                                            border-top-color: @dropdownLinkColorHover ;
+                                        }
+
+                                    }
+                                }
+
+                                &.active{
+                                    > a{
+                                        color: @dropdownLinkColorActive;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.nav-pills{
+                    li{
+                        &.dropdown{
+                            .dropdown-menu{
+                                li{
+                                    a{
+                                        &:hover,
+                                        &:focus{
+                                            color: @grayLight;
+                                        }
+                                    }
+                                    &.active{
+                                        > a{
+                                            color: @dropdownLinkColorActive;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -285,9 +445,30 @@ dl.tabs.nav {
             > a{
                 background-color: @tabsBackgroundActive;
                 color: @color_two !important;
+
+                [class^="icon-"], [class*=" icon-"] {
+                    color: inherit;
+                }
+
+                .caret{
+                    border-top-color: @color_two;
+                }
+
                 &:hover,
                 &:focus{
                     border: 0;
+                }
+            }
+        }
+
+        &.dropdown{
+            .dropdown-menu{
+                li{
+                    &.active{
+                        > a{
+                            background-color: @dropdownLinkBackgroundActive;
+                        }
+                    }
                 }
             }
         }
@@ -496,44 +677,6 @@ blockquote{
     text-shadow: none;
 }
 
-.well{
-    .box-shadow(none);
-    color: @textColor;
-
-    .nav{
-        li{
-            &.dropdown{
-                .dropdown-menu{
-                    li{
-                        a{
-                            color: @textColor;
-                            &:hover,
-                            &:focus{
-                                color: @dropdownLinkColorHover;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        &.nav-pills{
-            li{
-                &.dropdown{
-                    .dropdown-menu{
-                        li{
-                            a{
-                                &:hover,
-                                &:focus{
-                                    color: @grayLight;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 .img-polaroid{
     .box-sizing(border-box);
@@ -583,6 +726,78 @@ blockquote{
 
 #main-content{
     margin: 0;
+}
+
+// ----------------------------------------------------------------------------------
+
+.well{
+    .box-shadow(none);
+    color: @textColor;
+
+    .nav{
+        li{
+            &.dropdown{
+                .dropdown-menu{
+                    li{
+                        a{
+                            color: @textColor;
+
+                            .caret{
+                                border-top-color: @textColor;
+                            }
+
+                            &:hover,
+                            &:focus{
+                                color: @dropdownLinkColorHover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.nav-list,
+        &.nav-pills{
+            li{
+                &.dropdown{
+                    .dropdown-menu{
+                        li{
+                            a{
+                                .caret{
+                                    border-top-color: @textColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.nav-pills{
+            li{
+                &.dropdown{
+                    .dropdown-menu{
+                        li{
+                            a{
+                                &:hover,
+                                &:focus{
+                                    color: @grayLight;
+
+                                    .caret{
+                                        border-top-color: @grayLight
+                                    }
+                                }
+                            }
+
+                            &.active{
+                                > a{
+                                    background-color: @dropdownLinkBackgroundActive;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 // ----------------------------------------------------------------------------------
