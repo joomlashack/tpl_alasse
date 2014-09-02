@@ -27,6 +27,6 @@ if ($responsivePage == 0) {
 $sidebar2_exist = ($this->countModules('sidebar2')) ? ' sib2' : '' ;
 
 // Grid bottom full widht option
-$gb_full_width = $this->params->get('grid_bottom_full_width_mode','1');
-$gb_container_class = ($gb_full_width) ? 'container-fluid' : $containerClass;
-$gb_row_class = ($gb_full_width) ? 'row-fluid' : $gridMode;
+$gb2_full_width = $this->params->get('grid_bottom_full_width_mode','1');
+$gb2_container_class = ($gb2_full_width) ? 'container-fluid' : $containerClass;
+$gb2_row_class = ($gb2_full_width) ? 'row-fluid' : $gridMode;

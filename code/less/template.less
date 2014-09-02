@@ -808,11 +808,11 @@ blockquote{
 
 // ----------------------------------------------------------------------------------
 
-#grid-bottom{
+#grid-bottom2{
     margin: 0 auto;
 }
 
-#grid-bottom2{
+#grid-bottom{
     background: @color_three;
     color: @color_two;
     margin: 0;
@@ -820,8 +820,40 @@ blockquote{
 }
 
 #footer{
+    background-color: @color_four;
     background-image: none;
     border: 0;
+    border-top: 8px solid @color_one;
+}
+
+// ----------------------------------------------------------------------------------
+
+.module_ms1,
+.moduletable_ms1,
+.moduletext_ms1,
+.module_ms2,
+.moduletable_ms2,
+.moduletext_ms2{
+    > h3{
+        color: @color_five;
+        font-size: 32px;
+        text-align: center;
+    }
+}
+
+
+.module_ms2,
+.moduletable_ms2,
+.moduletext_ms2{
+    > h3{
+        position: relative;
+
+        &:after{
+            color: transparent;
+            content: '_______';
+            border-bottom: 2px solid @color_five;
+        }
+    }
 }
 
 // ----------------------------------------------------------------------------------
