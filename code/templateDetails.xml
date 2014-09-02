@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
-	<name>js_elear</name>
+	<name>js_alasse</name>
 	<creationDate>July 2014</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
@@ -9,15 +9,15 @@
 	<copyright>Copyright Joomlashack 2010-2014. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
 	<version>0.1.0</version>
-    <description>TPL_JS_ELEAR_XML_DESCRIPTION</description>
+    <description>TPL_JS_ALASSE_XML_DESCRIPTION</description>
 
 	<languages folder="language">
 		<!-- en-GB -->
-		<language tag="en-GB">en-GB/en-GB.tpl_js_elear.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_js_elear.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_alasse.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_js_alasse.sys.ini</language>
 		<!-- es-ES -->
-		<language tag="es-ES">es-ES/es-ES.tpl_js_elear.ini</language>
-		<language tag="es-ES">es-ES/es-ES.tpl_js_elear.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_alasse.ini</language>
+		<language tag="es-ES">es-ES/es-ES.tpl_js_alasse.sys.ini</language>
 	</languages>
 
 	<files>
@@ -57,7 +57,7 @@
 	</positions>
 
 	<config>
-		<fields name="params" addfieldpath="/templates/js_elear/wright/parameters/joomla_2.5">
+		<fields name="params" addfieldpath="/templates/js_alasse/wright/parameters/joomla_2.5">
 			<fieldset name="basic">
                 <!-- Start of default Wright params -->
 				<field name="helper" type="help" label="TPL_JS_WRIGHT_FIELD_NEED_HELP_LABEL" description="TPL_JS_WRIGHT_FIELD_NEED_HELP_DESC"/>
@@ -106,7 +106,7 @@
 				</field>
                 <!-- End of default Wright params -->
 			</fieldset>
-			<fieldset name="Elear">
+			<fieldset name="Alasse">
 				<field name="grid_bottom_full_width_mode" type="list" default="0"
 					label="TPL_JS_GB_FULL_WIDTH_MODE" description="TPL_JS_GB_FULL_WIDTH_MODE_DESC">
 					<option value="1">JYES</option>
