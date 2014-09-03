@@ -24,7 +24,7 @@ if ($responsivePage == 0) {
 }
 
 // Sidebar2 Exist
-$sidebar2_exist = ($this->countModules('sidebar2')) ? ' sib2' : '' ;
+$sidebar2_exist = ($this->countModules('sidebar2')) ? ' sb2' : '' ;
 
 // Grid bottom full widht option
 $gb2_full_width = $this->params->get('grid_bottom_full_width_mode','1');
