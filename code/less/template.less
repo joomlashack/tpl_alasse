@@ -901,3 +901,35 @@ blockquote{
         margin-right: auto;
     }
 }
+
+// ----------------------------------------------------------------------------------
+// General
+
+form {
+    .search{
+        > *{
+            margin-left: 6px;
+
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+
+        label{
+            display: inline-block;
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------------
+
+.list-striped li:nth-child(odd),
+.list-striped dd:nth-child(odd),
+.row-striped .row:nth-child(odd),
+.row-striped .row-fluid:nth-child(odd),
+.list-striped li:hover,
+.list-striped dd:hover,
+.row-striped .row:hover,
+.row-striped .row-fluid:hover{
+    color: @textColor;
+}
