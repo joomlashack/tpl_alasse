@@ -143,6 +143,24 @@ h6{
     .btn-navbar{
         padding-top: 9px;
     }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    .uneditable-input {
+        min-height: 21px;
+    }
 }
 
 .navbar-inverse{
@@ -941,4 +959,46 @@ form {
 .row-striped .row:hover,
 .row-striped .row-fluid:hover{
     color: @textColor;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    min-height: 23px;
+
+    &[class*="span"]{
+        .box-sizing(content-box);
+        &:first-child{
+            padding-left: 6px;
+        }
+        &:last-child{
+            padding-right: 6px;
+        }
+    }
+
+
+    &.input-block-level {
+        min-height: 33px;
+    }
+}
+
+
+.input-append,
+.input-prepend {
+    .add-on {
+        min-height: 23px;
+    }
 }
