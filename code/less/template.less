@@ -667,13 +667,47 @@ blockquote{
         background-color: darken(@btnBackground, 7%);
         color: @color_two;
     }
+    &:focus{
+        color: @color_two;
+    }
+
+    &.dropdown-toggle{
+        .caret{
+            border-top-color: @color_two;
+        }
+        &:focus{
+            .caret{
+                border-top-color: @color_two;
+            }
+        }
+    }
 }
 
 .btn-primary{
     &:hover{
         background-color: @btnPrimaryBackgroundHover;
     }
+    &:focus{
+        background-color: @btnPrimaryBackgroundFocus;
+        color: @btnPrimaryColorFocus
+
+    }
+    &.dropdown-toggle{
+        &:focus{
+            .caret{
+                border-top-color: @btnPrimaryColorFocus;
+            }
+        }
+    }
 }
+
+.btn-group.open .btn-primary.dropdown-toggle {
+    &:focus{
+        background-color: @btnPrimaryBackgroundFocus;
+        color: @btnPrimaryColorFocus;
+    }
+}
+
 .btn-info{
     &:hover{
         background-color: darken(@btnInfoBackground, 7%);
@@ -697,6 +731,14 @@ blockquote{
 .btn-inverse{
     &:hover{
         background-color: darken(@btnInverseBackground, 7%);
+    }
+}
+
+.dropup{
+    .btn{
+        .caret{
+            border-bottom-color: @color_two;
+        }
     }
 }
 
