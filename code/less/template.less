@@ -1,4 +1,12 @@
 
+// **** *    ****     *     ****
+// *    *    *       * *    * *
+// **** *    ****   *****   **
+// *    *    *     *     *  * *
+// **** **** **** *       * *  *
+
+// ----------------------------------------------------------------------------------
+
 .flexbox() {
     display: -webkit-box;
     display: -webkit-flex;
@@ -101,6 +109,7 @@ h6{
             }
 
             > .dropdown-menu{
+
                 &:before,
                 &:after{
                     content: none;
@@ -161,9 +170,6 @@ h6{
             }
         }
     }
-    .navbar-inner{
-        background-image: none;
-    }
 }
 
 .is_firefox{
@@ -182,6 +188,7 @@ h6{
 
 .navbar-inverse .navbar-inner,
 .navbar-inner{
+    background-image: none;
     border: 0;
 }
 
@@ -210,6 +217,8 @@ h6{
 .navbar .nav .navbar-inner {
     li.dropdown{
         .dropdown-menu{
+            .border-radius(0);
+
             li{
                 .sub-menu{
 
