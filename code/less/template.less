@@ -555,6 +555,22 @@ dl.tabs.nav {
     border-right: 0;
 }
 
+.nav-list{
+    li{
+        > a{
+            [class*="icon-"], [class^="icon-"]{
+                color: @linkColor;
+            }
+            &:hover,
+            &:focus{
+                [class*="icon-"], [class^="icon-"]{
+                    color: @linkColorHover;
+                }
+            }
+        }
+    }
+}
+
 // ----------------------------------------------------------------------------------
 
 code{
