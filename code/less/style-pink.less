@@ -1,0 +1,31 @@
+
+blockquote{
+    background-image: url(../images/bq-top-pink.png);
+
+    p{
+        background-image: url(../images/bq-bottom-pink.png);
+    }
+
+    &.pull-right{
+        background-image: url(../images/bq-bottom-pink.png);
+
+        p{
+            background-image: url(../images/bq-top-pink.png);
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------------
+
+.list-striped li:nth-child(odd),
+.list-striped dd:nth-child(odd),
+.row-striped .row:nth-child(odd),
+.row-striped .row-fluid:nth-child(odd),
+.list-striped li:hover,
+.list-striped dd:hover,
+.row-striped .row:hover,
+.row-striped .row-fluid:hover{
+    a{
+        color: @linkColorHover;
+    }
+}
