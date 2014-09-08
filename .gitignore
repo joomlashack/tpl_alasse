@@ -1,45 +1,55 @@
-# Numerous always-ignore extensions
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.zip
-*.vi
-*~
-*.sass-cache
-
-# OS or Editor folders
+# OSX
 .DS_Store
 ._*
+.Spotlight-V100
+.Trashes
+ 
+# Windows
 Thumbs.db
-.cache
+Desktop.ini
+ 
+# PHPStorm
+.idea/
+ 
+# Sublime Text
+*.sublime*
+sftp-config.json
+ 
+# Eclipse
+.buildpath
 .project
 .settings
-.tmproj
-*.esproj
-nbproject
-*.sublime-project
-*.sublime-workspace
-sftp-config.json
-
-# Komodo
-*.komodoproject
-.komodotools
-
-# Folders to ignore
-.hg
-.svn
-.CVS
-.idea
-node_modules
-dist
-
-# Build system
+ 
+# Netbeans (custom)
+.netbeans/*
+/nbproject/*
+ 
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~.nib
+*~
+ 
+# Phing build script
+build.properties
 autobuild.properties
-386574b8-3461-4068-8f72-ef74135bad70.dmp
-45dc3655-f256-45ca-b7ff-1b7ea3b744fd.dmp
-53e20fd8-cb87-4eee-8c66-748daf6cace5.dmp
-d090d903-cc27-4060-96a8-868231d4bfc8.dmp
+ 
+# Packages #
+*.zip
+*.tar.*
+ 
+# Composer
+composer.lock
+/vendor
+ 
+# Test related files
+/tests/system/servers/configdef.php
+/tests/system/webdriver/tests/logs/
+/tests/acceptance.suite.yml
+codecept.phar
+ 
+# Never ignore
+!.gitignore
+!index.html
+!index.php
