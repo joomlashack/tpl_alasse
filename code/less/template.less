@@ -516,6 +516,7 @@ dl.tabs.nav {
     }
 
     &.nav-stacked{
+        .border-radius(4px);
         padding-left: 0;
         padding-right: 0;
     }
@@ -958,6 +959,12 @@ blockquote{
 
 // ----------------------------------------------------------------------------------
 
+[class*="module"]{
+    > h3{
+        margin-top: 0;
+    }
+}
+
 .module_ms1,
 .moduletable_ms1,
 .moduletext_ms1,
@@ -1052,7 +1059,8 @@ blockquote{
 // General
 
 form {
-    .search{
+    .search,
+    .finder{
         > *{
             margin-left: 6px;
 
@@ -1064,6 +1072,12 @@ form {
         label{
             display: inline-block;
         }
+    }
+}
+
+#contact-form{
+    input{
+        margin-bottom: 10px;
     }
 }
 
