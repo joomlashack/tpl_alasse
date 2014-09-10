@@ -42,6 +42,7 @@
 		<position>top</position>
 		<position>menu</position>
 		<position>featured</position>
+		<position>floating</position>
 		<position>alasse-slider</position>
 		<position>grid-top</position>
 		<position>grid-top2</position>

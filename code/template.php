@@ -24,23 +24,33 @@ defined('_JEXEC') or die('Restricted access');
     </head>
     <body class="<?php echo $responsive . $sidebar2_exist; ?>">
         <?php if ($this->countModules('toolbar')) : ?>
-    	<w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
         <?php endif; ?>
 
         <header id="header">
             <div class="<?php echo $containerClass; ?>">
-            	<div class="<?php echo $gridMode; ?>">
-            		<w:logo name="menu" />
+                <div class="<?php echo $gridMode; ?>">
+                    <w:logo name="menu" />
                     <?php if ($this->countModules('top')) : ?>
                     <w:module type="none" name="top" chrome="xhtml" />
                     <?php endif; ?>
                 </div>
+            </div>
+
+            <?php if ($this->countModules('floating')) : ?>
+            <div id="floating">
+                <w:module type="none" name="floating" chrome="xhtml" />
+            </div>
+            <?php endif; ?>
+
+            <div class="<?php echo $containerClass; ?> rm-clearfix">
                 <?php if ($this->countModules('featured')) : ?>
-                    <div id="featured">
-                        <w:module type="none" name="featured" chrome="xhtml" />
-                    </div>
+                <div id="featured">
+                    <w:module type="none" name="featured" chrome="xhtml" />
+                </div>
                 <?php endif; ?>
             </div>
+
             <?php if ($this->countModules('alasse-slider')) : ?>
             <div id="alasse-slider">
                 <w:module type="none" name="alasse-slider" chrome="xhtml" />
