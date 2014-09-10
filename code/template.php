@@ -43,7 +43,7 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
 
-            <div class="<?php echo $containerClass; ?> rm-clearfix">
+            <div class="<?php echo $containerClass; ?>">
                 <?php if ($this->countModules('featured')) : ?>
                 <div id="featured">
                     <w:module type="none" name="featured" chrome="xhtml" />

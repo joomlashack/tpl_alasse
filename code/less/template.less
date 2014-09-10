@@ -70,7 +70,9 @@ h6{
 }
 
 #floating{
-    float: right;
+    position: absolute;
+    right: 0;
+    z-index: 1000;
 }
 
 // ----------------------------------------------------------------------------------
@@ -1165,10 +1167,3 @@ input[type="color"],
     }
 }
 
-.rm-clearfix{
-    &:before,
-    &:after{
-        display: none;
-        clear: none;
-    }
-}
