@@ -2,7 +2,7 @@
 <?php
 // Wright v.3 Override: Joomla 2.5.16 and 3.2
 /**
- * @package     Joomla.Site
+ * @package     Alasse
  * @subpackage  mod_articles_news
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc.
  *              All rights reserved.
