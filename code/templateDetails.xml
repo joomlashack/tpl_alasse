@@ -40,9 +40,9 @@
 		<position>toolbar</position>
 		<position>logo</position>
 		<position>top</position>
-		<position>top2</position>
 		<position>menu</position>
 		<position>featured</position>
+		<position>alasse-slider</position>
 		<position>grid-top</position>
 		<position>grid-top2</position>
 		<position>above-content</position>
