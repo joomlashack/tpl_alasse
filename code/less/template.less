@@ -817,11 +817,29 @@ blockquote{
         #main{
             background-color: @bodyBackground;
         }
+        #main{
+            padding-right: 15px;
+
+            + #sidebar2{
+                padding-left: 15px;
+            }
+        }
     }
 }
 
 #main-content{
     margin: 0;
+}
+
+#sidebar2{
+    [class*="newsflash-vert"]{
+        [class*="newsflash-title"]{
+            color: @color_two;
+            a{
+                color: @color_two;
+            }
+        }
+    }
 }
 
 // ----------------------------------------------------------------------------------
