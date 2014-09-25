@@ -98,18 +98,34 @@ h6{
 .navbar{
     .nav{
         > li{
-            padding-bottom: 13px;
-            padding-top: 13px;
+            margin-left: 2px;
+
             > a{
-                border-left: 1px solid @color_two;
                 line-height: @baseFontSize;
-                padding-bottom: 0;
-                padding-top: 0;
+                position: relative;
                 text-shadow: none;
+
+                &:before{
+                    content: '|';
+                    left: -23px;
+                    margin-left: 20px;
+                    position: absolute;
+                }
             }
             &:first-child{
+                margin-left: 0;
+
                 >a{
-                    border-left: 0;
+                    &:before{
+                        content: none;
+                        display: none;
+                    }
+                }
+            }
+
+            &:hover{
+                > a{
+                    background-color: @dropdownBackground;
                 }
             }
 
@@ -718,7 +734,7 @@ blockquote{
         color: @color_two;
     }
     &:focus{
-        color: @color_two;
+        color: #ccc;
     }
 
     &.dropdown-toggle{
@@ -727,9 +743,16 @@ blockquote{
         }
         &:focus{
             .caret{
-                border-top-color: @color_two;
+                border-top-color: #ccc;
             }
         }
+    }
+
+    &:active,
+    &.active,
+    &.disabled,
+    &[disabled]{
+        color: @color_two;
     }
 }
 
@@ -751,10 +774,19 @@ blockquote{
     }
 }
 
-.btn-group.open .btn-primary.dropdown-toggle {
-    &:focus{
-        background-color: @btnPrimaryBackgroundFocus;
-        color: @btnPrimaryColorFocus;
+.btn-group.open {
+    .btn-primary.dropdown-toggle {
+        &:focus{
+            background-color: @btnPrimaryBackgroundFocus;
+            color: @btnPrimaryColorFocus;
+        }
+    }
+
+    .btn-info.dropdown-toggle {
+         &:focus{
+            background-color: darken(@btnInfoBackground, 10%);
+            color: #4ee3e7;
+        }
     }
 }
 
@@ -762,25 +794,94 @@ blockquote{
     &:hover{
         background-color: darken(@btnInfoBackground, 7%);
     }
+    &:focus{
+        background-color: darken(@btnInfoBackground, 10%);
+        color: #4ee3e7;
+    }
+    &.dropdown-toggle{
+        &:focus{
+            .caret{
+                border-top-color: #4ee3e7;
+            }
+        }
+    }
 }
 .btn-success{
     &:hover{
         background-color: darken(@btnSuccessBackground, 7%);
+    }
+    &:focus{
+        background-color: darken(@btnSuccessBackground, 10%);
+        color: #a8f6a2;
+    }
+    &.dropdown-toggle{
+        &:focus{
+            .caret{
+                border-top-color: #a8f6a2;
+            }
+        }
     }
 }
 .btn-warning{
     &:hover{
         background-color: darken(@btnWarningBackground, 7%);
     }
+    &:focus{
+        background-color: darken(@btnWarningBackground, 10%);
+        color: #fbdc3e;
+    }
+    &.dropdown-toggle{
+        &:focus{
+            .caret{
+                border-top-color: #fbdc3e;
+            }
+        }
+    }
 }
 .btn-danger{
     &:hover{
         background-color: darken(@btnDangerBackground, 7%);
     }
+    &:focus{
+        background-color: darken(@btnDangerBackground, 10%);
+        color: #f38169;
+    }
+    &.dropdown-toggle{
+        &:focus{
+            .caret{
+                border-top-color: #f38169;
+            }
+        }
+    }
 }
 .btn-inverse{
     &:hover{
         background-color: darken(@btnInverseBackground, 7%);
+    }
+    &:focus{
+        background-color: darken(@btnInverseBackground, 10%);
+        color: @gray;
+    }
+    &.dropdown-toggle{
+        &:focus{
+            .caret{
+                border-top-color: @gray;
+            }
+        }
+    }
+}
+
+.btn-link{
+    color: @linkColor;
+
+    &:hover{
+        background-color: transparent;
+        color: @linkColorHover;
+    }
+
+    &:focus{
+        background-color: transparent;
+        color: @linkColorHover;
     }
 }
 
