@@ -819,6 +819,19 @@ blockquote{
     }
 }
 
+select,
+input[type="file"] {
+    &[class*="span"]{
+        padding: 0 5px;
+        .box-sizing(content-box);
+    }
+}
+// ----------------------------------------------------------------------------------
+
+.controls-row [class*="span"] + [class*="span"] {
+    margin-left: 20px;
+}
+
 // ----------------------------------------------------------------------------------
 
 .sb2{

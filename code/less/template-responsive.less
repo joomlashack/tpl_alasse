@@ -1,4 +1,9 @@
 
+@media (min-width: 1200px) {
+    .controls-row [class*="span"] + [class*="span"] {
+        margin-left: 30px;
+    }
+}
 
 @media (min-width: 768px) and (max-width: 979px) {
     #toolbar{
@@ -8,6 +13,10 @@
     }
     #menu{
         padding: 0;
+    }
+
+    .controls-row [class*="span"] + [class*="span"] {
+        margin-left: 20px;
     }
 }
 
@@ -199,9 +208,16 @@
         }
     }
     // ______________________________________________________________________________
+
     #floating{
         padding-top: 15px;
         position: static;
+    }
+
+    // ______________________________________________________________________________
+
+    .controls-row [class*="span"] + [class*="span"] {
+        margin-left: 0px;
     }
 
 }
