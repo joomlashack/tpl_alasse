@@ -83,6 +83,8 @@ h6{
 }
 
 .dropdown-menu{
+    margin-top: 0;
+
     .border-radius(0);
 
     &:before,
@@ -1022,6 +1024,37 @@ blockquote{
     .btn{
         .caret{
             border-bottom-color: @color_two;
+        }
+    }
+}
+
+.btn-group{
+    .btn{
+        &:first-of-type{
+            .border-top-left-radius(40px);
+            .border-bottom-left-radius(40px);
+        }
+
+        &:last-of-type{
+            .border-top-right-radius(40px);
+            .border-bottom-right-radius(40px);
+        }
+    }
+
+    &.btn-group-vertical{
+        .btn{
+            padding: 6px 12px;
+            &:first-of-type{
+                .border-top-right-radius(40px);
+                .border-top-left-radius(40px);
+                .border-bottom-left-radius(0);
+            }
+
+            &:last-of-type{
+                .border-bottom-left-radius(40px);
+                .border-bottom-right-radius(40px);
+                .border-top-right-radius(0);
+            }
         }
     }
 }
