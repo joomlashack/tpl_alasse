@@ -199,6 +199,10 @@ h6{
     }
 }
 
+.navbar-fixed-top .navbar-inner, .navbar-static-top .navbar-inner{
+    .box-shadow(none);
+}
+
 .navbar-inverse{
     .nav{
         .dropdown-menu{
@@ -290,30 +294,41 @@ h6{
 
 .module{
     .nav{
-        li.dropdown{
-            .dropdown-menu{
-                li{
-                   > a{
-                        color : @textColor;
-                        padding-left: 19px;
-                        padding-right: 19px;
+        li {
+            &.dropdown{
+                .dropdown-menu{
+                    li{
+                       > a{
+                            color : @textColor;
+                            padding-left: 19px;
+                            padding-right: 19px;
 
-                        > [class^="icon-"],
-                        > [class*=" icon-"] {
-                            color: inherit;
-                        }
+                            > [class^="icon-"],
+                            > [class*=" icon-"] {
+                                color: inherit;
+                            }
 
-                        .caret{
-                            border-top-color: @textColor;
-                        }
+                            .caret{
+                                border-top-color: @textColor;
+                            }
 
-                        &:hover, &:focus{
-                            color: @dropdownLinkColorHover;
+                            &:hover, &:focus{
+                                color: @dropdownLinkColorHover;
+                            }
                         }
                     }
                 }
             }
+
+            > a{
+                &:hover,
+                &:focus{
+                    background-color: @color_five;
+                }
+            }
+
         }
+
         &.nav-tabs{
             li.dropdown{
                 .dropdown-menu{
@@ -346,27 +361,56 @@ h6{
     }
 }
 
+#sidebar1,
 #sidebar2{
     .module{
         .nav{
-            li.dropdown{
-                .dropdown-menu{
-                    li{
-                       > a{
-                            color : @white;
+            li {
+                &.dropdown{
+                    .dropdown-menu{
+                        li{
+                           > a{
+                                color : @white;
 
-                            > [class^="icon-"],
-                            > [class*=" icon-"] {
-                                color: inherit;
-                            }
+                                > [class^="icon-"],
+                                > [class*=" icon-"] {
+                                    color: inherit;
+                                }
 
-                            .caret{
-                                border-top-color: @color_two ;
-                            }
+                                .caret{
+                                    border-top-color: @color_two ;
+                                }
 
-                            &:hover, &:focus{
-                                color: @dropdownLinkColorHover;
+                                &:hover, &:focus{
+                                    color: @dropdownLinkColorHover;
+                                }
                             }
+                        }
+                    }
+                }
+
+                &.active{
+                    > a{
+                        background-color: @color_five;
+                        color: @color_two;
+
+                        > [class^="icon-"],
+                        > [class*=" icon-"] {
+                            color: @color_two;
+                        }
+
+                        .caret{
+                            border-top-color: @color_two ;
+                        }
+
+                    }
+                }
+            }
+            &.nav-tabs{
+                li{
+                    &.active{
+                        > a{
+                            background-color: @tabsBackgroundActive;
                         }
                     }
                 }
@@ -607,15 +651,48 @@ dl.tabs.nav {
             }
             &:hover,
             &:focus{
+                background-color: @color_five;
+                color: @color_two;
+
                 [class*="icon-"], [class^="icon-"]{
-                    color: @linkColorHover;
+                    color: @color_two;
+                }
+
+                .caret{
+                    border-top-color: @color_two;
                 }
             }
         }
         &.dropdown{
             .dropdown-menu{
+                margin-left: -15px;
+                margin-right: -15px;
+
                 li a{
                     font-size: @baseFontSize - 2;
+                }
+            }
+        }
+    }
+}
+
+.nav.nav-pills{
+    li{
+        > a{
+            [class*="icon-"], [class^="icon-"]{
+                color: @linkColor;
+            }
+            &:hover,
+            &:focus{
+                background-color: @color_five;
+                color: @color_two;
+
+                [class*="icon-"], [class^="icon-"]{
+                    color: @color_two;
+                }
+
+                .caret{
+                    border-top-color: @color_two;
                 }
             }
         }
@@ -649,20 +726,19 @@ dl.tabs.nav {
     }
 }
 
-.nav-list{
-    li.dropdown .dropdown-menu{
-        margin-left: -15px;
-        margin-right: -15px;
-    }
-}
 
 // General Wright v3: Consider move to wright
 
-.nav.nav-tabs li.dropdown .dropdown-menu li > a,
+.nav.nav-tabs li.dropdown .dropdown-menu li > a{
+    &:hover,
+    &:focus{
+        background-color: @tabsBackgroundActive;
+    }
+}
 .nav.nav-pills li.dropdown .dropdown-menu li > a {
     &:hover,
     &:focus{
-        background-color: @dropdownLinkBackgroundHover;
+        background-color: @color_five;
     }
 }
 
@@ -1107,17 +1183,6 @@ input[type="file"] {
                 &.dropdown{
                     .dropdown-menu{
                         li{
-                            a{
-                                &:hover,
-                                &:focus{
-                                    color: @grayLight;
-
-                                    .caret{
-                                        border-top-color: @grayLight
-                                    }
-                                }
-                            }
-
                             &.active{
                                 > a{
                                     background-color: @dropdownLinkBackgroundActive;
