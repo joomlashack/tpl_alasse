@@ -1104,8 +1104,20 @@ input[type="file"] {
     .footer-content a:hover{
         color: @color_two;
     }
-    .nav li>a:hover{
-        background-color: transparent;
+
+    .module{
+        &.navbar{
+            .nav {
+                li{
+                    > a{
+                        [class^="icon-"],
+                        [class*=" icon-"] {
+                            color: @navbarLinkColor;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
