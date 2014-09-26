@@ -295,8 +295,8 @@ h6{
                 li{
                    > a{
                         color : @textColor;
-                        padding-left: 15px;
-                        padding-right: 15px;
+                        padding-left: 19px;
+                        padding-right: 19px;
 
                         > [class^="icon-"],
                         > [class*=" icon-"] {
@@ -317,8 +317,6 @@ h6{
         &.nav-tabs{
             li.dropdown{
                 .dropdown-menu{
-                    padding: 0 16px;
-
                     li{
                         > a{
                             color: @dropdownLinkColor;
@@ -415,7 +413,7 @@ h6{
                                     a{
                                         &:hover,
                                         &:focus{
-                                            color: @grayLight;
+                                            color: @dropdownLinkColorHover;
                                         }
                                     }
                                     &.active{
@@ -555,6 +553,7 @@ dl.tabs.nav {
         .border-radius(4px);
         padding-left: 0;
         padding-right: 0;
+
     }
 }
 
@@ -581,6 +580,14 @@ dl.tabs.nav {
                     margin-top: 20px;
                 }
             }
+
+            &.dropdown{
+                .dropdown-menu{
+                    li a{
+                        font-size: @baseFontSize - 2;
+                    }
+                }
+            }
         }
     }
 }
@@ -605,6 +612,57 @@ dl.tabs.nav {
                 }
             }
         }
+        &.dropdown{
+            .dropdown-menu{
+                li a{
+                    font-size: @baseFontSize - 2;
+                }
+            }
+        }
+    }
+}
+
+.nav-stacked{
+    li{
+        &.dropdown{
+            .dropdown-menu{
+                li a{
+                    font-size: @baseFontSize - 2;
+                }
+            }
+        }
+    }
+}
+
+#sidebar1,
+#sidebar2{
+    .nav{
+        li{
+            &.dropdown{
+                .dropdown-menu{
+                    li a{
+                        font-size: @baseFontSize - 2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-list{
+    li.dropdown .dropdown-menu{
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+// General Wright v3: Consider move to wright
+
+.nav.nav-tabs li.dropdown .dropdown-menu li > a,
+.nav.nav-pills li.dropdown .dropdown-menu li > a {
+    &:hover,
+    &:focus{
+        background-color: @dropdownLinkBackgroundHover;
     }
 }
 
@@ -1220,7 +1278,7 @@ input[type="file"] {
 }
 
 // ----------------------------------------------------------------------------------
-// General
+// General  Wright v3: Consider move to wright
 
 form {
     .search,
