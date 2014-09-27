@@ -43,17 +43,9 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
 
-            <div class="<?php echo $containerClass; ?>">
-                <?php if ($this->countModules('featured')) : ?>
-                <div id="featured">
-                    <w:module type="none" name="featured" chrome="xhtml" />
-                </div>
-                <?php endif; ?>
-            </div>
-
-            <?php if ($this->countModules('alasse-slider')) : ?>
-            <div id="alasse-slider">
-                <w:module type="none" name="alasse-slider" chrome="xhtml" />
+            <?php if ($this->countModules('featured')) : ?>
+            <div id="featured">
+                <w:module type="none" name="featured" chrome="xhtml" />
             </div>
             <?php endif; ?>
         </header>

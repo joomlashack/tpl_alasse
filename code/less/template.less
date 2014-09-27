@@ -54,14 +54,20 @@ h6{
     padding: 20px 0;
 }
 #featured{
-    margin: 0 auto;
-    max-width: 75%;
     padding: 50px 0 30px 0;
 
     [class*="module"]{
+        max-width: 29%;
+        margin: 0 auto;
+
         > h3{
             font-size: 56px;
         }
+    }
+
+    .moduletable_slider{
+        margin: 0;
+        max-width: 100%;
     }
 
     h1,h2,h3,h4,h5,h6{
@@ -1588,6 +1594,18 @@ div{
             }
 
         }
+    }
+
+    #sliderContainer div img.fillHeight,
+    #sliderContainer div img.fillWidth{
+        height: 100% !important;
+        max-width: none;
+        width: auto !important;
+    }
+
+    .slidermanImgCont div {
+        width: 100% !important;
+        height: 100% !important;
     }
 }
 
