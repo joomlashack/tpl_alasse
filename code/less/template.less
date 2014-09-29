@@ -112,6 +112,15 @@ h6{
         background-image: none;
     }
 }
+.nav{
+    > li{
+        > a{
+            &:hover,&:focus{
+                background-color: @color_five;
+            }
+        }
+    }
+}
 .navbar{
     .nav{
         > li{
@@ -430,6 +439,18 @@ h6{
                             background-color: @tabsBackgroundActive;
                         }
                     }
+                    &.dropdown{
+                        .dropdown-menu{
+                            li {
+                                a{
+                                    &:hover,
+                                    &:focus{
+                                        background-color: @tabsBackgroundActive;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -620,6 +641,8 @@ dl.tabs.nav {
 
 .tabs-below {
     > .nav-tabs{
+        border-top-color: @tabsBackgroundActive;
+
         > .active > a,
         > .active > a:hover,
         > .active > a:focus{
@@ -654,10 +677,10 @@ dl.tabs.nav {
 }
 
 .tabs-right > .nav-tabs {
-    border-left: 0;
+    border-left-color: @tabsBackgroundActive;
 }
 .tabs-left > .nav-tabs {
-    border-right: 0;
+    border-right-color: @tabsBackgroundActive;
 }
 
 .nav-list{
@@ -743,19 +766,45 @@ dl.tabs.nav {
     }
 }
 
+[data-toggle]{
+    + .dropdown-menu{
+        float: none;
+        padding: 0;
+    }
+}
 
 // General Wright v3: Consider move to wright
 
-.nav.nav-tabs li.dropdown .dropdown-menu li > a{
-    &:hover,
-    &:focus{
-        background-color: @tabsBackgroundActive;
-    }
-}
-.nav.nav-pills li.dropdown .dropdown-menu li > a {
-    &:hover,
-    &:focus{
-        background-color: @color_five;
+.nav {
+    &.nav-pills,
+    &.nav-tabs {
+        li.dropdown {
+            .dropdown-menu {
+                li {
+                    > a{
+                        &:hover,
+                        &:focus{
+                            background-color: @dropdownLinkBackgroundHover;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.nav-stacked{
+            li.dropdown {
+                .dropdown-menu {
+                    li {
+                        > a{
+                            &:hover,
+                            &:focus{
+                                background-color: @color_five;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
