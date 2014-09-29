@@ -775,6 +775,20 @@ dl.tabs.nav {
 
 // General Wright v3: Consider move to wright
 
+.nav li.dropdown {
+    &:hover{
+        [data-toggle]{
+            + .dropdown-menu{
+                display: none;
+
+                &.in{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 .nav {
     &.nav-pills,
     &.nav-tabs {
