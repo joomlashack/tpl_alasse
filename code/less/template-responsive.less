@@ -140,7 +140,6 @@
     }
 
     #header,
-    #featured,
     #grid-bottom{
         margin-left: -20px;
         margin-right: -20px;
@@ -150,6 +149,10 @@
         [class*="module"]{
             padding-left: 20px;
             padding-right: 20px;
+        }
+
+        .moduletable_slider{
+            padding: 0;
         }
     }
 
@@ -256,7 +259,6 @@
         }
     }
 
-
     // ______________________________________________________________________________
 
     .controls-row [class*="span"] + [class*="span"] {
@@ -267,6 +269,22 @@
 
     .show-grid.row-fluid [class*="span"] {
         margin-left: 0;
+        width: auto;
+    }
+    [class*="span"] {
+        width: auto;
+    }
+
+    // ______________________________________________________________________________
+    
+    div {
+        .slideTitle{
+            width: auto;
+        }
+    }
+
+    .slidermanDescriptionCont{
+        padding-left: 0;
         width: auto;
     }
 
