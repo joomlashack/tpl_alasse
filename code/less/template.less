@@ -299,8 +299,16 @@ h6{
 .nav .navbar-inner,
 .navbar .nav,
 .navbar .nav .navbar-inner {
+    li a{
+        > [class^="icon-"],
+        > [class*=" icon-"] {
+            margin-left: 0;
+        }
+    }
+
     li.dropdown{
         .dropdown-menu{
+            margin: 0;
             .border-radius(0);
 
             li{
@@ -340,6 +348,16 @@ h6{
 
                             &:hover, &:focus{
                                 color: @dropdownLinkColorHover;
+                            }
+                        }
+                    }
+                    .sub-menu{
+                        margin: 0;
+
+                        li {
+                            > a{
+                                padding-left: 28px;
+                                padding-right: 28px;
                             }
                         }
                     }
@@ -389,6 +407,66 @@ h6{
 
 #sidebar1,
 #sidebar2{
+    .well{
+        .nav{
+            li{
+                &.dropdown{
+                    .dropdown-menu{
+                        li{
+                            a{
+                                color : @white;
+
+                                > [class^="icon-"],
+                                > [class*=" icon-"] {
+                                    color: inherit;
+                                }
+
+                                .caret{
+                                    border-top-color: @color_two ;
+                                }
+
+                                &:hover,
+                                &:focus{
+                                    color: @dropdownLinkColorHover;
+                                }
+                            }
+                            &.active{
+                                > a{
+                                    color: @dropdownLinkColorActive;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .module{
+        .nav{
+            li{
+                &.active{
+                    > a{
+                        background-color: @color_five;
+                        color: @color_two;
+
+                        > [class^="icon-"],
+                        > [class*=" icon-"] {
+                            color: @color_two;
+                        }
+
+                        .caret{
+                            border-top-color: @color_two ;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#sidebar2{
     .module{
         .nav{
             li {
@@ -415,22 +493,6 @@ h6{
                     }
                 }
 
-                &.active{
-                    > a{
-                        background-color: @color_five;
-                        color: @color_two;
-
-                        > [class^="icon-"],
-                        > [class*=" icon-"] {
-                            color: @color_two;
-                        }
-
-                        .caret{
-                            border-top-color: @color_two ;
-                        }
-
-                    }
-                }
             }
             &.nav-tabs{
                 li{
@@ -455,31 +517,6 @@ h6{
             }
         }
 
-        .well{
-            .nav{
-                &.nav-pills{
-                    li{
-                        &.dropdown{
-                            .dropdown-menu{
-                                li{
-                                    a{
-                                        &:hover,
-                                        &:focus{
-                                            color: @dropdownLinkColorHover;
-                                        }
-                                    }
-                                    &.active{
-                                        > a{
-                                            color: @dropdownLinkColorActive;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -746,6 +783,14 @@ dl.tabs.nav {
 // General Wright v3: Consider move to wright
 
 .nav li.dropdown {
+    [data-toggle]{
+        + .dropdown-menu{
+            display: none;
+            &.in{
+                display: block;
+            }
+        }
+    }
     &:hover{
         [data-toggle]{
             + .dropdown-menu{
