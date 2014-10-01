@@ -31,12 +31,12 @@ defined('_JEXEC') or die('Restricted access');
             <div class="<?php echo $containerClass; ?>">
                 <div class="<?php echo $gridMode; ?>">
                     <w:logo name="menu" />
-                    <?php if ($this->countModules('top')) : ?>
-                    <div id="top">
-                        <w:module type="none" name="top" chrome="xhtml" />
-                    </div>
-                    <?php endif; ?>
                 </div>
+                <?php if ($this->countModules('top')) : ?>
+                <div id="top">
+                    <w:module type="none" name="top" chrome="xhtml" />
+                </div>
+                <?php endif; ?>
             </div>
 
             <?php if ($this->countModules('floating')) : ?>
