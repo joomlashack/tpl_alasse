@@ -58,6 +58,16 @@ h6{
         a{
             color: @color_two;
         }
+
+        .nav {
+            li {
+                a {
+                    [class^="icon-"], [class*=" icon-"] {
+                        color: @color_two;
+                    }
+                }
+            }
+        }
     }
 }
 #featured{

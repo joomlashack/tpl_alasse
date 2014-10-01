@@ -32,7 +32,9 @@ defined('_JEXEC') or die('Restricted access');
                 <div class="<?php echo $gridMode; ?>">
                     <w:logo name="menu" />
                     <?php if ($this->countModules('top')) : ?>
-                    <w:module type="none" name="top" chrome="xhtml" />
+                    <div id="top">
+                        <w:module type="none" name="top" chrome="xhtml" />
+                    </div>
                     <?php endif; ?>
                 </div>
             </div>
