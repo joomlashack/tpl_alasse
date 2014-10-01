@@ -64,55 +64,84 @@
     .nav-collapse .nav>li>a, .nav-collapse .dropdown-menu a{
         font-weight: 400;
     }
-    .navbar {
-        margin-bottom: 0;
+
+    .nav-collapse {
         .nav {
             >li {
-                padding: 0;
-
                 >a {
+                    margin-bottom: 0;
                     border-bottom: 1px solid @color_two;
                     border-left: 0;
-                    .border-radius(0);
                     font-weight: 400;
-                }
+                    .border-radius(0);
 
+                    &:hover,
+                    &:focus {
+                        background-color: @navbarLinkBackgroundHover;
+                    }
+                }
                 &:last-child{
                     > a{
                         border-bottom: 0;
                     }
                 }
+            }
+        }
+        .dropdown-menu a {
+            &:hover,
+            &:focus {
+                background-color: @dropdownLinkBackgroundHover;
+            }
+        }
+
+        [class*="span"]{
+            width: 100%;
+        }
+    }
+
+    .navbar-inverse {
+        .nav-collapse {
+            .nav>li>a {
+                &:hover,
+                &:focus {
+                    background-color: @navbarInverseLinkBackgroundHover;
+                }
+            }
+        }
+    }
+
+    .navbar {
+        margin-bottom: 0;
+        .nav {
+            >li {
+                margin-left: 0;
+                > a{
+                    &:before{
+                        display: none;
+                        content: none;
+                    }
+                }
+                padding: 0;
+
 
                 &.dropdown{
                     .dropdown-menu{
+                        background-color: @dropdownBackground;
                         li {
-                            &:hover {
-                                >a{
-                                    background-color: transparent;
-                                }
-                            }
-                            > a{
-                                &:hover,
-                                &:focus{
-                                    background-color: transparent;
-                                }
+                            > a {
+                                padding-left: 30px;
+                                padding-right: 30px;
                             }
 
+                            &.nav-header{
+                                padding-left: 30px;
+                                padding-right: 30px;
+                            }
                             &.active{
                                 > a{
                                     &:hover,
                                     &:focus{
                                         background-color: @dropdownLinkBackgroundActive;
-                                    }
-                                }
-                            }
-
-                            .sub-menu{
-                                li{
-                                    &:hover{
-                                        > a{
-                                            background-color: transparent;
-                                        }
                                     }
                                 }
                             }
@@ -161,13 +190,13 @@
         padding-right: 10px;
     }
 
-    #main-content,
-    #grid-top,
-    #grid-top2,
-    #grid-bottom2{
-        [class*="span"]{
-            padding-left: 0;
-            padding-right: 0;
+    .container-alasse {
+        .row,
+        .row-fluid{
+            > [class*="span"]{
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 
@@ -276,7 +305,7 @@
     }
 
     // ______________________________________________________________________________
-    
+
     div {
         .slideTitle{
             width: auto;
