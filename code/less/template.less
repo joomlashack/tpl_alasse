@@ -270,6 +270,10 @@ blockquote{
     &:focus{
         color: #ccc;
     }
+    &.active,
+    &:active{
+        box-shadow: none;
+    }
 
     &.dropdown-toggle{
         .caret{
@@ -480,7 +484,7 @@ blockquote{
     .row,
     .row-fluid {
         > [class*="span"]{
-            padding: 10px 0 10px 20px;
+            padding: 10px 0;
             .box-sizing(border-box);
 
             &:first-child{
@@ -2167,6 +2171,8 @@ div{
         background-color: transparent;
         border: 0;
         color: @textColor;
+        font-size: @baseFontSize + 6;
+        padding-left: 0;
 
         .icon-chevron-right{
             background-color: @btnPrimaryBackground;
@@ -2200,6 +2206,27 @@ div{
                 background-color: @btnPrimaryBackgroundFocus;
                 color: @btnPrimaryColorFocus
             }
+        }
+    }
+}
+
+.items-leading {
+    .readmore{
+        float: none;
+        .btn{
+            font-size: @baseFontSize + 12;
+        }
+    }
+}
+
+.blog,
+.blog-featured{
+    [class*="leading-"],
+    .item{
+        margin-bottom: 45px;
+
+        .readmore{
+            margin-top: 10px;
         }
     }
 }
