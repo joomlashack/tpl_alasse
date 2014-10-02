@@ -51,7 +51,7 @@ h6{
     background-color: @color_one;
     color: @color_two;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 10px;
 
     #top,
     #featured,
@@ -128,7 +128,10 @@ h6{
     right: 0;
     z-index: 1000;
 }
-
+#logo{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
 #menu{
     .nav{
         float: right;
@@ -136,6 +139,12 @@ h6{
     }
     .navbar-inner{
         padding-right: 0;
+    }
+}
+
+#bottom-menu{
+    .navbar-inner{
+        padding: 0;
     }
 }
 
@@ -1123,6 +1132,7 @@ input[type="color"],
 .navbar{
     .nav{
         > li{
+            line-height: 18px;
             margin-left: 2px;
 
             > a{
@@ -1913,7 +1923,6 @@ dl.tabs.nav {
 
 #menu{
     margin: 0;
-    padding-bottom: 0;
     .navbar{
         margin: 0;
     }
@@ -2122,4 +2131,27 @@ div{
 
 .relative{
     position: relative;
+}
+
+.container-fluid{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.container-fluid-mode{
+    #featured{
+        [class*="module"]{
+            max-width: 62%;
+        }
+        .moduletable_slider{
+            max-width: 100%;
+        }
+    }
+}
+
+.floating-exist{
+    .container-fluid{
+        margin: auto;
+        width: 85%;
+    }
 }

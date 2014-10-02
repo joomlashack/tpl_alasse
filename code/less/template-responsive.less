@@ -244,6 +244,12 @@
     .container-mode #featured [class*="module"] {
         max-width: 74%;
     }
+
+    .floating-exist{
+        .container-fluid{
+            width: 80%;
+        }
+    }
 }
 
 @media (min-width: 767px) and (max-width: 1070px) {
@@ -290,10 +296,21 @@
             }
 
             .moduletable_slider{
-                max-width: none !important;
-                padding: 0;
                 margin-left: -20px;
                 margin-right: -20px;
+                max-width: none !important;
+                padding: 0;
+            }
+        }
+    }
+
+    .container-fluid-mode{
+        #featured{
+            .moduletable_slider{
+                margin-left: -20px;
+                margin-right: -20px;
+                max-width: none !important;
+                padding: 0;
             }
         }
     }
@@ -495,5 +512,11 @@
     .footer-content{
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .floating-exist{
+        .container-fluid {
+            width: auto;
+        }
     }
 }
