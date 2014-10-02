@@ -22,15 +22,13 @@ defined('_JEXEC') or die('Restricted access');
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     </head>
-    <body class="<?php echo $responsive . $sidebar2_exist; ?>">
+    <body class="<?php echo $responsive . $sidebar2_exist . ' ' . $containerClass . '-mode' . $floatingDisplayedClass ; ?>">
         <?php if ($this->countModules('toolbar')) : ?>
         <?php if (!$alasseToolbarDisplayed) : ?>
-        <div class="fixed fixed-top">
-            <div class="<?php echo $containerClass ?> visible-desktop">
-                <a class="alasse-toolbar-switch btn btn-navbar" >
-                    <span class="icon-angle-down icon-2x"></span>
-                </a>
-            </div>
+        <div class="<?php echo $containerClass ?> visible-desktop relative">
+            <a class="alasse-toolbar-switch btn btn-navbar" >
+                <span class="icon-angle-down icon-2x"></span>
+            </a>
         </div>
         <?php endif; ?>
         <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass . ($alasseToolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
@@ -40,7 +38,7 @@ defined('_JEXEC') or die('Restricted access');
 
         <header id="header">
             <div class="<?php echo $containerClass; ?>">
-                <div class="<?php echo $gridMode; ?>">
+                <div class="row-fluid">
                     <w:logo name="menu" />
                 </div>
                 <?php if ($this->countModules('top')) : ?>
@@ -66,12 +64,12 @@ defined('_JEXEC') or die('Restricted access');
         <div class="<?php echo $containerClass ?>">
             <?php if ($this->countModules('grid-top')) : ?>
             <div id="grid-top" class="container-alasse">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+                <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
             </div>
             <?php endif; ?>
             <?php if ($this->countModules('grid-top2')) : ?>
             <div id="grid-top2" class="container-alasse">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+                <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
             </div>
             <?php endif; ?>
         </div>
@@ -79,7 +77,7 @@ defined('_JEXEC') or die('Restricted access');
         <div class="bg-sidebar">
             <div class="bg-sidebar-inner"></div>
             <div class="<?php echo $containerClass; ?> container-alasse">
-                <div id="main-content" class="<?php echo $gridMode; ?>">
+                <div id="main-content" class="row-fluid">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
                         <w:module name="sidebar1" chrome="xhtml" />
@@ -115,14 +113,14 @@ defined('_JEXEC') or die('Restricted access');
         <?php if ($this->countModules('grid-bottom')) : ?>
         <div id="grid-bottom">
             <div class="<?php echo $containerClass; ?> container-alasse">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+                <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
             </div>
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
         <div id="grid-bottom2" class="<?php echo $gb2_container_class; ?> container-alasse">
-            <w:module type="<?php echo $gb2_row_class; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+            <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
@@ -134,7 +132,7 @@ defined('_JEXEC') or die('Restricted access');
 
                 <div class="<?php echo $containerClass ?> footer-content container-alasse">
                     <?php if ($this->countModules('footer')) : ?>
-                    <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+                    <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
                     <?php endif; ?>
     				<w:footer />
     			</div>

@@ -76,7 +76,6 @@ h6{
     .clearfix();
 
     [class*="module"]{
-        max-width: 29%;
         margin: 0 auto;
         padding: 60px 0;
 
@@ -88,7 +87,6 @@ h6{
 
     .moduletable_slider{
         margin: 0;
-        max-width: 100%;
         padding: 0;
 
         &:first-child{
@@ -112,6 +110,17 @@ h6{
 
 }
 
+.container-mode{
+    #featured{
+        [class*="module"]{
+            max-width: 49%;
+        }
+        .moduletable_slider{
+            max-width: 100% !important;
+        }
+    }
+}
+
 #floating{
     max-width: 150px;
     color: @textColor;
@@ -122,7 +131,11 @@ h6{
 
 #menu{
     .nav{
+        float: right;
         margin-right: 0;
+    }
+    .navbar-inner{
+        padding-right: 0;
     }
 }
 
@@ -2048,6 +2061,7 @@ div{
 // ----------------------------------------------------------------------------------
 
 .jssocialicons {
+    margin-left: 0;
     .clearfix();
 }
 .jssocialicons-vertical{
@@ -2062,18 +2076,6 @@ div{
 
 // ----------------------------------------------------------------------------------
 
-.fixed{
-    position: fixed;
-    width: 100%;
-    z-index: 3;
-    .container, .container-fluid{
-        position: relative;
-    }
-}
-.fixed-top{
-    top: 0;
-}
-
 .alasse-toolbar-switch.btn.btn-navbar{
     background-color: transparent;
     border: 0;
@@ -2082,7 +2084,7 @@ div{
     margin-top: 5px;
     padding: 0;
     position: absolute;
-    right: 0;
+    right: -30px;
     top: 0;
     width: 19px;
     z-index: 1031;
@@ -2116,4 +2118,8 @@ div{
 #nav-toolbar{
     display: table;
     margin: 0 auto;
+}
+
+.relative{
+    position: relative;
 }

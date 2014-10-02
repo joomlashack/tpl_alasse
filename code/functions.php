@@ -33,4 +33,7 @@ $gb2_row_class = ($gb2_full_width) ? 'row-fluid' : $gridMode;
 
 // Toolbar Displayed
 $alasseToolbarDisplayed = ($this->params->get('alasse_toolbar_displayed','1') == '1' ? true : false);
-$alasseToolbarDisplayedClass = (!$alasseToolbarDisplayed) ? " tollbarNoDisplayed" : "" ;
+
+$floatingDisplayedClass = "" ;
+if ($this->countModules('floating'))
+	$floatingDisplayedClass = " floating-exist";
