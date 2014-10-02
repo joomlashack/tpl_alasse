@@ -1064,6 +1064,16 @@ input[type="color"],
                     margin-left: 20px;
                     position: absolute;
                 }
+
+                &.item-desc{
+                    margin: 5px 10px;
+                    padding-bottom: 4px;
+                    padding-top: 4px;
+
+                    &:before{
+                        left: -33px;
+                    }
+                }
             }
             &:first-child{
                 margin-left: 0;
@@ -1073,9 +1083,18 @@ input[type="color"],
                         content: none;
                         display: none;
                     }
+                    &.item-desc{
+                        margin-left: 0;
+                    }
                 }
             }
-
+            &:last-child{
+                > a{
+                    &.item-desc{
+                        margin-right: 0;
+                    }
+                }
+            }
             &:hover{
                 > a{
                     background-color: @dropdownBackground;
@@ -1240,6 +1259,17 @@ input[type="color"],
         > [class*=" icon-"] {
             margin-left: 0;
         }
+
+        &.item-desc{
+            background-color: @navbarLinkBackgroundHover;
+            border-radius: 20px;
+            color: @color_two;
+
+            &:hover,
+            &:focus{
+                background-color: @dropdownLinkBackgroundHover !important;
+            }
+        }
     }
 
     li.dropdown{
@@ -1320,6 +1350,17 @@ input[type="color"],
                 }
             }
         }
+
+        &.nav-stacked{
+            > li{
+                a{
+                    .item-des{
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
     }
 
     .tabbable{
@@ -1396,6 +1437,10 @@ input[type="color"],
 
                     }
                 }
+                > a{
+
+
+                }
             }
         }
     }
@@ -1439,7 +1484,14 @@ input[type="color"],
                         }
                     }
                 }
-
+            }
+            > li{
+                > a{
+                    &.item-desc{
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                }
             }
             &.nav-tabs{
                 li{
@@ -1728,20 +1780,22 @@ dl.tabs.nav {
             + .dropdown-menu{
                 float: none;
                 padding: 0;
-                display: none;
+                visibility: hidden;
 
                 &.in{
-                    display: block;
+                    visibility: visible;;
                 }
             }
         }
-        &:hover{
-            [data-toggle]{
-                + .dropdown-menu{
-                    display: none;
+        li.dropdown {
+            &:hover{
+                [data-toggle]{
+                    + .dropdown-menu{
+                        visibility: hidden;
 
-                    &.in{
-                        display: block;
+                        &.in{
+                            visibility: visible;;
+                        }
                     }
                 }
             }
@@ -1750,9 +1804,6 @@ dl.tabs.nav {
 }
 
 // General Wright v3: Consider move to wright
-
-.nav li.dropdown {
-}
 
 .nav {
     &.nav-pills,
