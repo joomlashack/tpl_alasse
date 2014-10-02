@@ -776,6 +776,11 @@ input[type="file"] {
                         }
                     }
                 }
+                > li {
+                    >a{
+                        padding-top: 0;
+                    }
+                }
             }
         }
     }
@@ -806,6 +811,7 @@ input[type="file"] {
 .moduletable_ms2,
 .moduletext_ms2{
     > h3{
+        background-color: @grayLighter;
         position: relative;
 
         &:after{
@@ -813,7 +819,12 @@ input[type="file"] {
             content: '_______';
             border-bottom: 2px solid @color_five;
         }
+
+        + * {
+            margin: 0 0 0 35%;
+        }
     }
+
 }
 
 .module_ms3,
