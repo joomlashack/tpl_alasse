@@ -2159,3 +2159,47 @@ div{
         width: 85%;
     }
 }
+
+// ----------------------------------------------------------------------------------
+
+.readmore{
+    .btn{
+        background-color: transparent;
+        border: 0;
+        color: @textColor;
+
+        .icon-chevron-right{
+            background-color: @btnPrimaryBackground;
+            color: @color_two;
+            display: block;
+            float: right;
+            font-size: @baseFontSize - 4;
+            margin-left: 7px;
+            min-height: 10px;
+            padding:7px 9px 5px;
+            .border-radius(5px);
+
+            &:hover{
+                background-color: @btnPrimaryBackgroundHover;
+            }
+
+            &:focus{
+                background-color: @btnPrimaryBackgroundFocus;
+                color: @btnPrimaryColorFocus
+            }
+        }
+
+        &:hover{
+            background-color: transparent;
+        }
+
+        &:focus{
+            background-color: transparent;
+            color: @textColor;
+            .icon-chevron-right{
+                background-color: @btnPrimaryBackgroundFocus;
+                color: @btnPrimaryColorFocus
+            }
+        }
+    }
+}
