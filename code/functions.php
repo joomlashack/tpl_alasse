@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Elear
+ * @package     Alasse
  * @subpackage  Functions
  *
  * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.  All rights reserved.
@@ -30,3 +30,7 @@ $sidebar2_exist = ($this->countModules('sidebar2')) ? ' sb2' : '' ;
 $gb2_full_width = $this->params->get('grid_bottom_full_width_mode','1');
 $gb2_container_class = ($gb2_full_width) ? 'container-fluid' : $containerClass;
 $gb2_row_class = ($gb2_full_width) ? 'row-fluid' : $gridMode;
+
+// Toolbar Displayed
+$alasseToolbarDisplayed = ($this->params->get('alasse_toolbar_displayed','1') == '1' ? true : false);
+$alasseToolbarDisplayedClass = (!$alasseToolbarDisplayed) ? " tollbarNoDisplayed" : "" ;

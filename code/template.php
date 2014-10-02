@@ -24,7 +24,18 @@ defined('_JEXEC') or die('Restricted access');
     </head>
     <body class="<?php echo $responsive . $sidebar2_exist; ?>">
         <?php if ($this->countModules('toolbar')) : ?>
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        <?php if (!$alasseToolbarDisplayed) : ?>
+        <div class="fixed fixed-top">
+            <div class="<?php echo $containerClass ?> visible-desktop">
+                <a class="alasse-toolbar-switch btn btn-navbar" >
+                    <span class="icon-angle-down icon-2x"></span>
+                </a>
+            </div>
+        </div>
+        <?php endif; ?>
+        <div class="wrappToolbar<?php echo ' border-toolbar-' . $containerClass . ($alasseToolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
+            <w:nav containerClass="<?php echo $containerClass ?> alasse-toolbar-container<?php echo ($alasseToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        </div>
         <?php endif; ?>
 
         <header id="header">
@@ -129,5 +140,8 @@ defined('_JEXEC') or die('Restricted access');
     			</div>
     	    </footer>
         </div>
+        <?php if(!$alasseToolbarDisplayed): ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_alasse/js/alasse.js'></script>
+        <?php endif; ?>
     </body>
 </html>

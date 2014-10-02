@@ -24,7 +24,12 @@
         width: 100% !important;
     }
 }
-
+@media (min-width: 980px){
+    #nav-toolbar {
+        display: table;
+        margin: 0 auto;
+    }
+}
 @media (min-width: 768px) and (max-width: 979px) {
     #toolbar{
         .navbar .container{
@@ -155,6 +160,13 @@
     div #sliderContainer div img.fillHeight,
     div #sliderContainer div img.fillWidth{
         width: auto !important;
+    }
+
+    // ------------------------------------------------------------------------------
+
+    .wrappToolbar.collapsedToolbar .navbar-inner .collapsedToolbarInner{
+        height: auto;
+        overflow: visible;
     }
 
 }

@@ -1950,3 +1950,61 @@ div{
         .border-radius(10px 0 0 10px);
     }
 }
+
+// ----------------------------------------------------------------------------------
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    .container, .container-fluid{
+        position: relative;
+    }
+}
+.fixed-top{
+    top: 0;
+}
+
+.alasse-toolbar-switch.btn.btn-navbar{
+    background-color: transparent;
+    border: 0;
+    display: inline-block;
+    height: 10px;
+    margin-top: 5px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 19px;
+    z-index: 1031;
+    .box-sizing(border-box);
+    .transition(none);
+}
+.container-fluid{
+    .alasse-toolbar-switch.btn.btn-navbar{
+        right: 20px;
+    }
+}
+
+.wrappToolbar {
+    background-color: @navbarInverseBackground;
+    .clearfix();
+    min-height: 40px;
+    &.collapsedToolbar {
+        .navbar-inner {
+            min-height: 0;
+            .collapsedToolbarInner {
+                height: 0;
+                overflow: hidden;
+            }
+        }
+        .wrapper-toolbar{
+            min-height: 40px !important;
+        }
+    }
+}
+
+#nav-toolbar{
+    display: table;
+    margin: 0 auto;
+}

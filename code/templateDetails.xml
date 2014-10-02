@@ -113,6 +113,10 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+				<field name="alasse_toolbar_displayed" type="radio" default="1" label="TPL_JS_ALASSE_TOOLBAR_DISPLAYED" description="TPL_JS_ALASSE_TOOLBAR_DISPLAYED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>
