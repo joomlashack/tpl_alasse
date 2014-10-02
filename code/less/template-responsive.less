@@ -329,4 +329,35 @@
         width: auto;
     }
 
+    // ______________________________________________________________________________
+
+    .module_ms2,
+    .moduletable_ms2,
+    .moduletext_ms2{
+        &.span4,
+        &.span5,
+        &.span6,
+        &.span7,
+        &.span8,
+        &.span9,
+        &.span10,
+        &.span11,
+        &.span12{
+            > h3{
+                text-align: center;
+                width: auto;
+
+                &:after{
+                    content: "_______";
+                    left: auto;
+                    position: static;
+                }
+
+                ~ *{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
 }

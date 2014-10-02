@@ -797,6 +797,9 @@ input[type="file"] {
 .module_ms1,
 .moduletable_ms1,
 .moduletext_ms1{
+    > h3{
+        text-align: center;
+    }
     [class*="newsflash-horiz"]{
         [class*="newsflash-title"]{
             color: @color_five;
@@ -816,7 +819,6 @@ input[type="file"] {
     > h3{
         color: @color_five;
         font-size: 32px;
-        text-align: center;
     }
 }
 
@@ -824,20 +826,44 @@ input[type="file"] {
 .moduletable_ms2,
 .moduletext_ms2{
     > h3{
-        background-color: @grayLighter;
+        padding-right: 7px;
         position: relative;
+        text-align: center;
 
         &:after{
-            color: transparent;
-            content: '_______';
             border-bottom: 2px solid @color_five;
-        }
-
-        + * {
-            margin: 0 0 0 35%;
+            color: transparent;
+            content: "";
         }
     }
 
+    &.span4,
+    &.span5,
+    &.span6,
+    &.span7,
+    &.span8,
+    &.span9,
+    &.span10,
+    &.span11,
+    &.span12{
+        > h3{
+            text-align: right;
+            width: 50%;
+            .box-sizing(border-box);
+
+            &:after{
+                bottom: 0;
+                height: 100%;
+                left: 100%;
+                position: absolute;
+                width: 38%;
+            }
+
+            ~ *{
+                padding-left: 50%;
+            }
+        }
+    }
 }
 
 .module_ms3,
