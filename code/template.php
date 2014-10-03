@@ -141,5 +141,23 @@ defined('_JEXEC') or die('Restricted access');
         <?php if(!$alasseToolbarDisplayed): ?>
         <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_alasse/js/alasse.js'></script>
         <?php endif; ?>
+        <?php
+        $browser = JBrowser::getInstance();
+
+        if ($browser->getBrowser() == 'msie')
+        {
+            $major = $browser->getMajor();
+
+            if ((int)$major == 8) {
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
+                . "/js/jquery.equalheights.js'></script>";
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
+                . "/js/fallback.js'></script>";
+            }
+
+        }
+        ?>
     </body>
 </html>
