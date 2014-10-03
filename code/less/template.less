@@ -758,8 +758,20 @@ input[type="file"] {
     [class*="newsflash-vert"]{
         [class*="newsflash-title"]{
             color: @color_two;
+            .transition(all 0.2s ease-in)
+
+            &:hover{
+                color: #BDC3C7;
+            }
+
             a{
                 color: @color_two;
+                .transition(all 0.2s ease-in)
+
+                &:hover,
+                &:focus{
+                    color: #BDC3C7;
+                }
             }
         }
     }
@@ -884,8 +896,20 @@ input[type="file"] {
     [class*="newsflash-horiz"]{
         [class*="newsflash-title"]{
             color: @color_five;
+            .transition(all .2s ease-in);
+
+            &:hover{
+               color: #BDC3C7;
+            }
+
             a{
                 color: @color_five;
+                .transition(all .2s ease-in);
+
+                &:hover,
+                &:focus{
+                    color: #BDC3C7;
+                }
             }
         }
     }
