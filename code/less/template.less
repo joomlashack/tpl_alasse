@@ -152,11 +152,21 @@ h6{
 }
 
 #floating{
-    max-width: 150px;
     color: @textColor;
+    max-width: 155px;
+    min-width: 155px;
+    overflow: hidden;
     position: absolute;
     right: 0;
     z-index: 1000;
+
+    [class*="module"]{
+        float: right;
+    }
+
+    .jssocialicons{
+        margin-top: 5px;
+    }
 }
 #logo{
     padding-top: 10px;
@@ -1138,6 +1148,31 @@ input[type="color"],
     }
     &.socialicon-youtube {
         background-position: -433px 0px !important;
+    }
+}
+
+.jssocialicons {
+    margin-left: 0;
+    .clearfix();
+}
+.jssocialicons-vertical{
+    .socialicon-templatedesign-16,
+    .socialicon-templatedesign-24,
+    .socialicon-templatedesign-32,
+    .socialicon-templatedesign-48,
+    .socialicon-templatedesign-64{
+        .border-radius(10px 0 0 10px);
+    }
+    li {
+        a{
+            .transition(all 0.1s ease-in);
+        }
+
+        &:hover{
+            a{
+                .scale(1.1);
+            }
+        }
     }
 }
 
@@ -2131,22 +2166,6 @@ div{
             }
 
         }
-    }
-}
-
-// ----------------------------------------------------------------------------------
-
-.jssocialicons {
-    margin-left: 0;
-    .clearfix();
-}
-.jssocialicons-vertical{
-    .socialicon-templatedesign-16,
-    .socialicon-templatedesign-24,
-    .socialicon-templatedesign-32,
-    .socialicon-templatedesign-48,
-    .socialicon-templatedesign-64{
-        .border-radius(10px 0 0 10px);
     }
 }
 
