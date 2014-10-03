@@ -85,8 +85,28 @@
         }
     }
 
+    #menu,
+    #logo{
+        float: none;
+        width: auto;
+    }
     #menu{
         padding: 0;
+        .nav{
+            float: none;
+        }
+    }
+
+    #header{
+        .navbar-inner{
+            position: relative;
+
+            .btn-navbar{
+                position: absolute;
+                top: -50px;
+                right: 0;
+            }
+        }
     }
 
     .controls-row [class*="span"] + [class*="span"] {
