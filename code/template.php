@@ -148,7 +148,7 @@ defined('_JEXEC') or die('Restricted access');
         {
             $major = $browser->getMajor();
 
-            if ((int)$major == 8) {
+            if ((int)$major <= 9) {
                 echo "<script type='text/javascript' src='" . JURI::root()
                 .  "templates/" . $this->document->template
                 . "/js/jquery.equalheights.js'></script>";
