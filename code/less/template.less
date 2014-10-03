@@ -1109,12 +1109,116 @@ input[type="color"],
     }
 }
 
+.row-fluid{
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    .uneditable-input {
+        min-height: 23px;
+    }
+}
+
 
 .input-append,
 .input-prepend {
     .add-on {
         min-height: 23px;
     }
+
+}
+.input-append {
+    .btn-group{
+        .btn{
+            &:first-of-type{
+                &:last-of-type{
+                   .border-top-left-radius(0);
+                   .border-bottom-left-radius(0);
+                   .border-top-right-radius(40px);
+                   .border-bottom-right-radius(40px);
+                }
+            }
+        }
+        &:last-child{
+            .btn{
+                &:first-of-type{
+                   .border-bottom-left-radius(0);
+                   .border-top-left-radius(0);
+
+                    &:last-of-type{
+                       .border-top-right-radius(40px);
+                       .border-bottom-right-radius(40px);
+                       .border-top-left-radius(0);
+                       .border-bottom-left-radius(0);
+                    }
+                }
+            }
+            > .dropdown-toggle{
+                .border-bottom-right-radius(40px);
+                .border-top-right-radius(40px);
+            }
+        }
+    }
+
+    .btn{
+        &:last-child{
+           .border-top-right-radius(40px);
+           .border-bottom-right-radius(40px);
+        }
+    }
+}
+
+.input-prepend {
+    .btn-group{
+        .btn{
+            &:first-of-type{
+                &:last-of-type{
+                   .border-top-left-radius(40px);
+                   .border-bottom-left-radius(40px);
+                   .border-top-right-radius(0);
+                   .border-bottom-right-radius(0);
+                }
+            }
+            + .dropdown-toggle{
+               .border-bottom-right-radius(0);
+               .border-top-right-radius(0);
+            }
+        }
+        &:last-child{
+            .btn{
+                &:first-of-type{
+                    &:last-of-type{
+                       .border-top-right-radius(40px);
+                       .border-bottom-right-radius(40px);
+                       .border-top-left-radius(0);
+                       .border-bottom-left-radius(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input-prepend.input-append .btn:first-child {
+    .border-top-left-radius(40px);
+    .border-bottom-left-radius(40px);
+}
+.input-prepend.input-append input + .btn-group .btn,
+.input-prepend.input-append select + .btn-group .btn,
+.input-prepend.input-append .uneditable-input + .btn-group .btn{
+    .border-top-right-radius(40px);
+    .border-bottom-right-radius(40px);
 }
 
 // ----------------------------------------------------------------------------------
