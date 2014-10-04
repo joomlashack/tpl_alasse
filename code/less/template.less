@@ -2426,7 +2426,6 @@ div{
         background-color: transparent;
         border: 0;
         color: @textColor;
-        font-size: @baseFontSize + 6;
         padding-left: 0;
 
         .icon-chevron-right{
@@ -2472,8 +2471,62 @@ div{
             font-size: @baseFontSize + 12;
         }
     }
+    .row-fluid{
+        > *{
+            > h2{
+                display: inline-block;
+                font-size: 26px;
+                padding-right: 12px;
+                
+                &:before{
+                    content: "\f054";
+                    font-family: FontAwesome;
+                    background-color: @btnPrimaryBackground;
+                    color: @color_two;
+                    display: block;
+                    float: right;
+                    font-size: @baseFontSize - 4;
+                    margin-left: 5px;
+                    margin-top: 7px;
+                    min-height: 10px;
+                    padding:7px 9px 5px;
+                    .border-radius(5px);
+                }
+                a{
+                    color: @textColor;
+                }
+            }
+        }
+    }
 }
 
+.items-row{
+    .item{
+        > h2{
+            display: inline-block;
+            font-size: @baseFontSize + 6;
+            padding-left: 12px;
+
+            &:before{
+                content: "\f054";
+                font-family: FontAwesome;
+                background-color: @btnPrimaryBackground;
+                color: @color_two;
+                display: block;
+                float: right;
+                font-size: @baseFontSize - 4;
+                margin-left: 5px;
+                margin-top: 5px;
+                min-height: 10px;
+                padding:7px 9px 5px;
+                .border-radius(5px);
+            }
+            a{
+                color: @textColor;
+            }
+        }
+    }
+}
 .blog,
 .blog-featured{
     [class*="leading-"],
@@ -2490,7 +2543,32 @@ div{
             [class*="img-intro-"]{
                 display: none;
             }
+
+            .row-fluid{
+                > .span6{
+                    &:first-child{
+                        > h2{
+                            &:first-child{
+                                display: block;
+                                float: right;
+                                padding-left: 0;
+                                padding-right: 12px;
+                                
+                                + *{
+                                    clear: both;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
+    }
+}
+
+.fullwidthimage{
+    .container-fluid{
+        padding: 0;
     }
 }
 
