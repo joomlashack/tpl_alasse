@@ -19,6 +19,7 @@ $input = $app->input;
 // Check if there's a sidebar at all
 $sidebarExists = (JModuleHelper::getModules('sidebar1') || JModuleHelper::getModules('sidebar2'));
 
+$wrightBodyClass .= ($this->countModules('sidebar1')) ? ' sb1' : '';
 $wrightBodyClass .= ($this->countModules('sidebar2')) ? ' sb2' : '';
 $wrightBodyClass .= ($this->countModules('floating')) ? ' floating-exists' : '';
 $wrightBodyClass .= ' ' . $wrightContainerClass . '-mode';

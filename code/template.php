@@ -85,7 +85,7 @@ defined('_JEXEC') or die('Restricted access');
                     <!-- main -->
                     <section id="main">
 
-						<?php if ($mainComplementContainer != '') : ?>
+						<?php if ($mainComplementContainer == '') : ?>
 							<div class="<?php echo $mainComplementContainer ?>">
 								<div class="<?php echo $mainComplementGridMode ?>">
 									<div class="<?php echo $mainComplementSpan ?>">
@@ -103,7 +103,7 @@ defined('_JEXEC') or die('Restricted access');
                         <?php endif; ?>
 
 
-						<?php if ($mainComplementContainer != '') : ?>
+						<?php if ($mainComplementContainer == '') : ?>
 									</div>
 								</div>
 							</div>
@@ -112,7 +112,7 @@ defined('_JEXEC') or die('Restricted access');
                         <!-- component -->
                         <w:content />
 
-						<?php if ($mainComplementContainer != '') : ?>
+						<?php if ($mainComplementContainer == '') : ?>
 							<div class="<?php echo $mainComplementContainer ?>">
 								<div class="<?php echo $mainComplementGridMode ?>">
 									<div class="<?php echo $mainComplementSpan ?>">
@@ -124,7 +124,7 @@ defined('_JEXEC') or die('Restricted access');
                         </div>
                         <?php endif; ?>
 
-						<?php if ($mainComplementContainer != '') : ?>
+						<?php if ($mainComplementContainer == '') : ?>
 									</div>
 								</div>
 							</div>

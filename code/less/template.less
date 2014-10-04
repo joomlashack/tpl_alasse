@@ -528,6 +528,13 @@ blockquote{
             }
         }
     }
+    .fullwidthimage{
+        .row-fluid {
+            > [class*="span"]{
+                padding: 0;
+            }
+        }
+    }
 }
 
 .show-grid {
@@ -2367,8 +2374,21 @@ div{
         }
 
     }
+
+    &.no-padding{
+        padding: 0;
+    }
 }
 
+.sb1,
+.sb2,
+{
+    .container-fluid{
+        &.container-images{
+            display: none;
+        }
+    }
+}
 .wrappToolbar {
     background-color: @navbarInverseBackground;
     .clearfix();
@@ -2553,7 +2573,7 @@ div{
                                 float: right;
                                 padding-left: 0;
                                 padding-right: 12px;
-                                
+
                                 + *{
                                     clear: both;
                                 }
