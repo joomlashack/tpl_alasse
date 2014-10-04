@@ -119,7 +119,7 @@ defined('_JEXEC') or die('Restricted access');
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div id="grid-bottom2" class="<?php echo $gb2_container_class; ?> container-alasse">
+        <div id="grid-bottom2" class="<?php echo $containerClass; ?> container-alasse">
             <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
@@ -156,7 +156,6 @@ defined('_JEXEC') or die('Restricted access');
                 .  "templates/" . $this->document->template
                 . "/js/fallback.js'></script>";
             }
-
         }
         ?>
     </body>
