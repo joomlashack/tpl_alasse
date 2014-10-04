@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Elear
+ * @package     Alasse
  * @subpackage  Template File
  *
  * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.
