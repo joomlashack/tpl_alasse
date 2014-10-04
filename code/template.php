@@ -76,14 +76,21 @@ defined('_JEXEC') or die('Restricted access');
 
         <div class="bg-sidebar">
             <div class="bg-sidebar-inner"></div>
-            <div class="<?php echo $wrightContainerClass; ?> container-alasse">
-                <div id="main-content" class="row-fluid">
+            <div class="<?php echo $mainContainer; ?> container-alasse">
+                <div id="main-content" class="<?php echo $mainGridMode ?>">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
                         <w:module name="sidebar1" chrome="xhtml" />
                     </aside>
                     <!-- main -->
                     <section id="main">
+
+						<?php if ($mainComplementContainer != '') : ?>
+							<div class="<?php echo $mainComplementContainer ?>">
+								<div class="<?php echo $mainComplementGridMode ?>">
+									<div class="<?php echo $mainComplementSpan ?>">
+						<?php endif; ?>
+
                         <?php if ($this->countModules('above-content')) : ?>
                         <div id="above-content">
                             <w:module type="none" name="above-content" chrome="xhtml" />
@@ -94,14 +101,36 @@ defined('_JEXEC') or die('Restricted access');
                                 <w:module type="single" name="breadcrumbs" chrome="none" />
                         </div>
                         <?php endif; ?>
+
+
+						<?php if ($mainComplementContainer != '') : ?>
+									</div>
+								</div>
+							</div>
+						<?php endif; ?>
+
                         <!-- component -->
                         <w:content />
+
+						<?php if ($mainComplementContainer != '') : ?>
+							<div class="<?php echo $mainComplementContainer ?>">
+								<div class="<?php echo $mainComplementGridMode ?>">
+									<div class="<?php echo $mainComplementSpan ?>">
+						<?php endif; ?>
+
                         <?php if ($this->countModules('below-content')) : ?>
                         <div id="below-content">
                             <w:module type="none" name="below-content" chrome="xhtml" />
                         </div>
                         <?php endif; ?>
+
+						<?php if ($mainComplementContainer != '') : ?>
+									</div>
+								</div>
+							</div>
+						<?php endif; ?>
                     </section>
+
                     <!-- sidebar2 -->
                     <aside id="sidebar2">
                         <w:module name="sidebar2" chrome="xhtml" />
