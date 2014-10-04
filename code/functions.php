@@ -12,25 +12,9 @@ defined('_JEXEC') or die('Restricted access');
 
 JLoader::import('joomla.environment.browser');
 
-// get the bootstrap row mode ( row / row-fluid )
-$gridMode = $this->params->get('bs_rowmode','row-fluid');
-$containerClass = 'container';
-if ($gridMode == 'row-fluid') {
-    $containerClass = 'container-fluid';
-}
+$wrightBodyClass .= ($this->countModules('sidebar2')) ? ' sb2' : '';
+$wrightBodyClass .= ($this->countModules('floating')) ? ' floating-exists' : '';
+$wrightBodyClass .= ' ' . $wrightContainerClass . '-mode';
 
-$responsivePage = $this->params->get('responsive','1');
-$responsive = ' responsive';
-if ($responsivePage == 0) {
-    $responsive = ' no-responsive';
-}
-
-// Sidebar2 Exist
-$sidebar2_exist = ($this->countModules('sidebar2')) ? ' sb2' : '' ;
-
-// Toolbar Displayed
+// Toolbar is Displayed
 $alasseToolbarDisplayed = ($this->params->get('alasse_toolbar_displayed','1') == '1' ? true : false);
-
-$floatingDisplayedClass = "" ;
-if ($this->countModules('floating'))
-	$floatingDisplayedClass = " floating-exist";
