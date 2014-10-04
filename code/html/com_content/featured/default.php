@@ -43,4 +43,4 @@ $this->wrightLeadingItemElementsStructure = Array(
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 
-include Overrider::getOverride('com_content.category', 'blog');
+include Overrider::getOverride('com_content.featured');
