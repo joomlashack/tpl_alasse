@@ -153,8 +153,8 @@ h6{
 
 #floating{
     color: @textColor;
-    max-width: 155px;
-    min-width: 155px;
+    max-width: 88px;
+    min-width: 88px;
     overflow: hidden;
     position: absolute;
     right: 0;
@@ -162,6 +162,10 @@ h6{
 
     [class*="module"]{
         float: right;
+        font-size: @baseFontSize - 1;
+        > h3{
+            font-size: @baseFontSize + 3;
+        }
     }
 
     .jssocialicons{
@@ -2433,7 +2437,7 @@ div{
     }
 }
 
-.floating-exist{
+.floating-exists{
     .container-fluid{
         margin: auto;
         width: 85%;
