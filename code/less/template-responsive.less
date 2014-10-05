@@ -551,20 +551,32 @@
             width: auto;
         }
     }
-    
+
     .container-fluid{
         &.container-images{
             display: none;
         }
     }
 
-    .blog, 
+    .blog,
     .blog-featured {
         .container-images+.container {
+            .item-image,
             [class*="img-intro-"]{
                 display: block;
-                margin: 0 -20px;
                 max-width: none;
+
+            }
+            .img-intro-none{
+                margin: 0 -20px;
+            }
+            .item-image{
+                margin: 0 -20px;
+
+                &.pull-left,
+                &.pull-right{
+                    margin: 0px 20px 18px 0px;
+                }
             }
             .row-fluid>.span6:first-child {
                 >h2:first-of-type {
