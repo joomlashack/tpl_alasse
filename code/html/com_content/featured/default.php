@@ -27,9 +27,7 @@ $paramLayout = $input->getVar('layout', 'default');
 $paramItemid = $input->getVar('Itemid', '');
 $paramId = $input->getVar('id', '');
 
-$alasseFullWidthBg = ($paramOption == 'com_content' && ($paramView == 'category' && $paramLayout == 'blog') || ($paramView == 'featured'));
-
-if ($alasseFullWidthBg && !$sidebarExists)
+if (!$sidebarExists)
 {
 	$this->wrightNonContentContainer = ($template->params->get('bs_rowmode', 'row') == 'row' ? 'container' : 'container-fluid');
 	$this->wrightContentExtraContainer = ($template->params->get('bs_rowmode', 'row') == 'row' ? 'container' : 'container-fluid');
