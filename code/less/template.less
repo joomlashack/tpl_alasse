@@ -308,11 +308,12 @@ blockquote{
 
     &:hover{
         .transition(all 0.3s ease);
-        background-color: darken(@btnBackground, 7%);
+        background-color: @btnBackgroundHover;
         color: @color_two;
     }
     &:focus{
-        color: #ccc;
+        background-color: @btnBackgroundFocus;
+        color: @btnColorFocus;
     }
     &.active,
     &:active{
@@ -325,7 +326,7 @@ blockquote{
         }
         &:focus{
             .caret{
-                border-top-color: #ccc;
+                border-top-color: @btnColorFocus;
             }
         }
     }
@@ -340,17 +341,16 @@ blockquote{
 
 .btn-primary{
     &:hover{
-        background-color: @btnPrimaryBackgroundHover;
+        background-color: darken(@btnPrimaryBackground, 7%);
     }
     &:focus{
-        background-color: @btnPrimaryBackgroundFocus;
-        color: @btnPrimaryColorFocus
-
+        background-color: darken(@btnPrimaryBackground, 10%);
+        color: #ccc;
     }
     &.dropdown-toggle{
         &:focus{
             .caret{
-                border-top-color: @btnPrimaryColorFocus;
+                color: #ccc;
             }
         }
     }
@@ -359,8 +359,8 @@ blockquote{
 .btn-group.open {
     .btn-primary.dropdown-toggle {
         &:focus{
-            background-color: @btnPrimaryBackgroundFocus;
-            color: @btnPrimaryColorFocus;
+            background-color: darken(@btnBackground, 7%);
+            color: @btnColorFocus;
         }
     }
 
@@ -2458,7 +2458,7 @@ div{
         padding-left: 0;
 
         .icon-chevron-right{
-            background-color: @btnPrimaryBackground;
+            background-color: @btnBackground;
             color: @color_two;
             display: block;
             float: right;
@@ -2469,12 +2469,12 @@ div{
             .border-radius(5px);
 
             &:hover{
-                background-color: @btnPrimaryBackgroundHover;
+                background-color: @btnBackgroundHover;
             }
 
             &:focus{
-                background-color: @btnPrimaryBackgroundFocus;
-                color: @btnPrimaryColorFocus
+                background-color: @btnBackgroundFocus;
+                color: @btnColorFocus
             }
         }
 
@@ -2486,8 +2486,8 @@ div{
             background-color: transparent;
             color: @textColor;
             .icon-chevron-right{
-                background-color: @btnPrimaryBackgroundFocus;
-                color: @btnPrimaryColorFocus
+                background-color: @btnBackgroundFocus;
+                color: @btnColorFocus
             }
         }
     }
@@ -2510,7 +2510,7 @@ div{
                 &:before{
                     content: "\f054";
                     font-family: FontAwesome;
-                    background-color: @btnPrimaryBackground;
+                    background-color: @btnBackground;
                     color: @color_two;
                     display: block;
                     float: right;
@@ -2539,7 +2539,7 @@ div{
             &:before{
                 content: "\f054";
                 font-family: FontAwesome;
-                background-color: @btnPrimaryBackground;
+                background-color: @btnBackground;
                 color: @color_two;
                 display: block;
                 float: right;
