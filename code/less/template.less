@@ -2439,14 +2439,17 @@ div{
             max-width: 100%;
         }
     }
-}
-
-.floating-exists{
-    .container-fluid{
-        margin: auto;
-        width: 85%;
+    &.floating-exists{
+        .container-fluid{
+            margin: auto;
+            width: 85%;
+            &.container-images{
+                width: auto;
+            }
+        }
     }
 }
+
 
 // ----------------------------------------------------------------------------------
 
@@ -2521,6 +2524,19 @@ div{
                     padding:7px 9px 5px;
                     .border-radius(5px);
                 }
+
+                &:hover{
+                    &:before{
+                        cursor: pointer;
+                        background-color: @btnBackgroundHover;
+                    }
+                }
+
+                &:focus{
+                    &:before{
+                        background-color: @btnBackgroundFocus;
+                    }
+                }
                 a{
                     color: @textColor;
                 }
@@ -2550,6 +2566,18 @@ div{
                 padding:7px 9px 5px;
                 .border-radius(5px);
             }
+            &:hover{
+                &:before{
+                    cursor: pointer;
+                    background-color: @btnBackgroundHover;
+                }
+            }
+
+            &:focus{
+                &:before{
+                    background-color: @btnBackgroundFocus;
+                }
+            }
             a{
                 color: @textColor;
             }
@@ -2576,7 +2604,7 @@ div{
     }
 
     .container-images{
-        + .container{
+        + div{
             [class*="img-intro-"],
             .item-image{
                 display: none;

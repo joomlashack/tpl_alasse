@@ -339,6 +339,11 @@
                 padding: 0;
             }
         }
+        &.floating-exists{
+            .container-fluid{
+                width: auto;
+            }
+        }
     }
 
     .container-alasse {
@@ -556,14 +561,15 @@
 
     .blog,
     .blog-featured {
-        .container-images+.container {
+        .container-images + div {
             .item-image,
             [class*="img-intro-"]{
                 display: block;
                 max-width: none;
 
             }
-            .img-intro-none{
+            [class*="img-intro-"]{
+                float: none;
                 margin: 0 -20px;
             }
             .item-image{
