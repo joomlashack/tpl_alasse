@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Elear
+ * @package     Alasse
  * @subpackage  Template File
  *
  * @copyright   Copyright (C) 2005 - 2014 Joomlashack. Meritage Assets.
@@ -22,19 +22,30 @@ defined('_JEXEC') or die('Restricted access');
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
     </head>
-    <body class="<?php echo $responsive . $sidebar2_exist; ?>">
+    <body class="<?php echo $wrightBodyClass ?>">
         <?php if ($this->countModules('toolbar')) : ?>
-        <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        <?php if (!$alasseToolbarDisplayed) : ?>
+        <div class="<?php echo $wrightContainerClass ?> visible-desktop relative">
+            <a class="alasse-toolbar-switch btn btn-navbar" >
+                <span class="icon-angle-down icon-2x"></span>
+            </a>
+        </div>
+        <?php endif; ?>
+        <div class="wrappToolbar<?php echo ' border-toolbar-' . $wrightContainerClass . ($alasseToolbarDisplayed ? '' : ' collapsedToolbar'); ?>">
+            <w:nav containerClass="<?php echo $wrightContainerClass ?> alasse-toolbar-container<?php echo ($alasseToolbarDisplayed ? '' : ' collapsedToolbarInner'); ?>" rowClass="<?php echo $wrightGridMode;?>" wrapClass="navbar-fixed-top navbar-inverse" type="toolbar" name="toolbar" />
+        </div>
         <?php endif; ?>
 
         <header id="header">
-            <div class="<?php echo $containerClass; ?>">
-                <div class="<?php echo $gridMode; ?>">
+            <div class="<?php echo $wrightContainerClass; ?>">
+                <div class="row-fluid">
                     <w:logo name="menu" />
-                    <?php if ($this->countModules('top')) : ?>
-                    <w:module type="none" name="top" chrome="xhtml" />
-                    <?php endif; ?>
                 </div>
+                <?php if ($this->countModules('top')) : ?>
+                <div id="top">
+                    <w:module type="none" name="top" chrome="xhtml" />
+                </div>
+                <?php endif; ?>
             </div>
 
             <?php if ($this->countModules('floating')) : ?>
@@ -50,29 +61,36 @@ defined('_JEXEC') or die('Restricted access');
             <?php endif; ?>
         </header>
 
-        <div class="<?php echo $containerClass ?>">
+        <div class="<?php echo $wrightContainerClass ?>">
             <?php if ($this->countModules('grid-top')) : ?>
-            <div id="grid-top">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-top" chrome="wrightflexgrid" />
+            <div id="grid-top" class="container-alasse">
+                <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
             </div>
             <?php endif; ?>
             <?php if ($this->countModules('grid-top2')) : ?>
-            <div id="grid-top2">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-top2" chrome="wrightflexgrid" />
+            <div id="grid-top2" class="container-alasse">
+                <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
             </div>
             <?php endif; ?>
         </div>
 
         <div class="bg-sidebar">
             <div class="bg-sidebar-inner"></div>
-            <div class="<?php echo $containerClass; ?>">
-                <div id="main-content" class="<?php echo $gridMode; ?>">
+            <div class="<?php echo $mainContainer; ?> container-alasse">
+                <div id="main-content" class="<?php echo $mainGridMode ?>">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
                         <w:module name="sidebar1" chrome="xhtml" />
                     </aside>
                     <!-- main -->
                     <section id="main">
+
+						<?php if ($mainComplementContainer == '') : ?>
+							<div class="<?php echo $mainComplementContainer ?>">
+								<div class="<?php echo $mainComplementGridMode ?>">
+									<div class="<?php echo $mainComplementSpan ?>">
+						<?php endif; ?>
+
                         <?php if ($this->countModules('above-content')) : ?>
                         <div id="above-content">
                             <w:module type="none" name="above-content" chrome="xhtml" />
@@ -83,14 +101,36 @@ defined('_JEXEC') or die('Restricted access');
                                 <w:module type="single" name="breadcrumbs" chrome="none" />
                         </div>
                         <?php endif; ?>
+
+
+						<?php if ($mainComplementContainer == '') : ?>
+									</div>
+								</div>
+							</div>
+						<?php endif; ?>
+
                         <!-- component -->
                         <w:content />
+
+						<?php if ($mainComplementContainer == '') : ?>
+							<div class="<?php echo $mainComplementContainer ?>">
+								<div class="<?php echo $mainComplementGridMode ?>">
+									<div class="<?php echo $mainComplementSpan ?>">
+						<?php endif; ?>
+
                         <?php if ($this->countModules('below-content')) : ?>
                         <div id="below-content">
                             <w:module type="none" name="below-content" chrome="xhtml" />
                         </div>
                         <?php endif; ?>
+
+						<?php if ($mainComplementContainer == '') : ?>
+									</div>
+								</div>
+							</div>
+						<?php endif; ?>
                     </section>
+
                     <!-- sidebar2 -->
                     <aside id="sidebar2">
                         <w:module name="sidebar2" chrome="xhtml" />
@@ -100,32 +140,52 @@ defined('_JEXEC') or die('Restricted access');
         </div>
 
         <?php if ($this->countModules('grid-bottom')) : ?>
-        <div id="grid-bottom" >
-            <div class="<?php echo $containerClass; ?>">
-                <w:module type="<?php echo $gridMode; ?>" name="grid-bottom" chrome="wrightflexgrid" />
+        <div id="grid-bottom">
+            <div class="<?php echo $wrightContainerClass; ?> container-alasse">
+                <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
             </div>
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div id="grid-bottom2" class="<?php echo $gb2_container_class; ?>">
-            <w:module type="<?php echo $gb2_row_class; ?>" name="grid-bottom2" chrome="wrightflexgrid" />
+        <div id="grid-bottom2" class="<?php echo $wrightContainerClass; ?> container-alasse">
+            <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>
 
         <div class="wrapper-footer">
     	    <footer id="footer" <?php if ($this->params->get('stickyFooter',1)) : ?> class="sticky"<?php endif;?>>
                 <?php if ($this->countModules('bottom-menu')) : ?>
-                <w:nav containerClass="<?php echo $containerClass ?>" rowClass="<?php echo $gridMode;?>" name="bottom-menu" wrapClass="navbar-inverse navbar-transparent" />
+                <w:nav containerClass="<?php echo $wrightContainerClass ?>" rowClass="<?php echo $wrightGridMode;?>" name="bottom-menu" wrapClass="navbar-inverse navbar-transparent" />
                 <?php endif; ?>
 
-                <div class="<?php echo $containerClass ?> footer-content">
+                <div class="<?php echo $wrightContainerClass ?> footer-content container-alasse">
                     <?php if ($this->countModules('footer')) : ?>
-                    <w:module type="<?php echo $gridMode; ?>" name="footer" chrome="wrightflexgrid" />
+                    <w:module type="row-fluid" name="footer" chrome="wrightflexgrid" />
                     <?php endif; ?>
     				<w:footer />
     			</div>
     	    </footer>
         </div>
+        <?php if(!$alasseToolbarDisplayed): ?>
+        <script type='text/javascript' src='<?php echo JURI::root(true) ?>/templates/js_alasse/js/alasse.js'></script>
+        <?php endif; ?>
+        <?php
+        $browser = JBrowser::getInstance();
+
+        if ($browser->getBrowser() == 'msie')
+        {
+            $major = $browser->getMajor();
+
+            if ((int)$major <= 9) {
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
+                . "/js/jquery.equalheights.js'></script>";
+                echo "<script type='text/javascript' src='" . JURI::root()
+                .  "templates/" . $this->document->template
+                . "/js/fallback.js'></script>";
+            }
+        }
+        ?>
     </body>
 </html>

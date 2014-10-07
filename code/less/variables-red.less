@@ -12,11 +12,11 @@
 
 @bsDocsBorderColor:     @linkColorHover;
 
-@btnPrimaryBackgroundHover: #C0392B;
-@btnPrimaryBackgroundFocus: #9B2D1D;
-@btnPrimaryColorFocus:      #E84B3A;
+@btnBackgroundHover: #C0392B;
+@btnBackgroundFocus: #9B2D1D;
+@btnColorFocus:      #E84B3A;
 
-@submenuLinkBackgroundHover:     #9B2D1D;
+@submenuLinkBackgroundHover:     #742216;
 
 // Global values
 // --------------------------------------------------
@@ -100,11 +100,11 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     @grayLight;
-@btnBackgroundHighlight:            @grayLight;
-@btnBorder:                         @grayLight;
+@btnBackground:                     @color_one;
+@btnBackgroundHighlight:            @color_one;
+@btnBorder:                         @color_one;
 
-@btnPrimaryBackground:              @color_one;
+@btnPrimaryBackground:              @grayLight;
 @btnPrimaryBackgroundHighlight:     @btnPrimaryBackground;
 
 @btnInfoBackground:                 #5bc0de;
@@ -188,7 +188,7 @@
 
 // Wells
 // -------------------------
-@wellBackground:                  lighten(#f5f5f5,3%);
+@wellBackground:                  @color_three;
 
 
 // Navbar
@@ -288,18 +288,18 @@
 // Default 940px grid
 // -------------------------
 @gridColumns:             12;
-@gridColumnWidth:         65px;
-@gridGutterWidth:         0;
+@gridColumnWidth:         69.1px;
+@gridGutterWidth:         10;
 @gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
 
 // 1200px min
-@gridColumnWidth1200:     86px;
-@gridGutterWidth1200:     0;
+@gridColumnWidth1200:     88.3px;
+@gridGutterWidth1200:     10;
 @gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
 
 // 768px-979px
-@gridColumnWidth768:      49px;
-@gridGutterWidth768:      0;
+@gridColumnWidth768:      51px;
+@gridGutterWidth768:      10;
 @gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
 
 
@@ -315,3 +315,4 @@
 // 768px-979px
 @fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
 @fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
+

@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_alasse</name>
-	<creationDate>September 2014</creationDate>
+	<creationDate>October 2014</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>http://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2010-2014. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
-	<version>0.1.0</version>
+	<version>1.0</version>
     <description>TPL_JS_ALASSE_XML_DESCRIPTION</description>
 
 	<languages folder="language">
@@ -108,10 +108,9 @@
                 <!-- End of default Wright params -->
 			</fieldset>
 			<fieldset name="Alasse">
-				<field name="grid_bottom_full_width_mode" type="list" default="0"
-					label="TPL_JS_GB_FULL_WIDTH_MODE" description="TPL_JS_GB_FULL_WIDTH_MODE_DESC">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
+				<field name="alasse_toolbar_displayed" type="radio" default="1" label="TPL_JS_ALASSE_TOOLBAR_DISPLAYED" description="TPL_JS_ALASSE_TOOLBAR_DISPLAYED_DESC">
+					<option value="0">JNo</option>
+					<option value="1">JYes</option>
 				</field>
 			</fieldset>
 		</fields>

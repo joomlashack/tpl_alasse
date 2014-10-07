@@ -2,21 +2,21 @@
 // Variables
 // --------------------------------------------------
 
-@color_one:             @salmon;
+@color_one:             @gray;
 @color_two:             @white;
 @color_three:           #444752;
 @color_four:            #272B37;
-@color_five:            #FF6F6F;
+@color_five:            #BDC3C7;
 
-@tabsBackgroundActive : darken(@salmon, 15%);
+@tabsBackgroundActive : darken(@gray, 15%);
 
 @bsDocsBorderColor:     @linkColorHover;
 
-@btnBackgroundHover: #D1404A;
-@btnBackgroundFocus: #A93239;
-@btnColorFocus:      #FF6F6F;
+@btnBackgroundHover: darken(@gray, 7%);
+@btnBackgroundFocus: darken(@gray, 12%);
+@btnColorFocus:      @grayLight;
 
-@submenuLinkBackgroundHover:     #7F252B;
+@submenuLinkBackgroundHover:     #3A3C41;
 
 // Global values
 // --------------------------------------------------
@@ -28,11 +28,11 @@
 @black:                 #000;
 @grayDarker:            #222;
 @grayDark:              #333;
-@gray:                  #555;
+@gray:                  #BDC3C7;
 @grayLight:             #999;
 @grayLighter:           #eee;
 @white:                 #fff;
-@salmon:                #FF6F6F;
+
 
 // Accent colors
 // -------------------------
@@ -43,7 +43,7 @@
 @yellow:                #F8C82D;
 @orange:                #f89406;
 @pink:                  #c3325f;
-@purple:                #7a43b6;
+@purple:                #B23F73;
 
 
 // Scaffolding
@@ -94,7 +94,7 @@
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #FFE2E2; // for striping
+@tableBackgroundAccent:             #F2F3F4; // for striping
 @tableBackgroundHover:              darken(@tableBackgroundAccent, 7%); // for hover
 @tableBorder:                       @color_three; // table and cell border
 
@@ -135,8 +135,8 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            #D1404A;
-@dropdownBorder:                #D1404A;
+@dropdownBackground:            #61646C;
+@dropdownBorder:                #61646C;
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
@@ -144,8 +144,8 @@
 @dropdownLinkColorHover:        @color_two;
 @dropdownLinkColorActive:       @color_two;
 
-@dropdownLinkBackgroundActive:  #A93239;
-@dropdownLinkBackgroundHover:   #A93239;
+@dropdownLinkBackgroundActive:  #4E5056;
+@dropdownLinkBackgroundHover:   #4E5056;
 
 
 
@@ -315,4 +315,3 @@
 // 768px-979px
 @fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
 @fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
-
