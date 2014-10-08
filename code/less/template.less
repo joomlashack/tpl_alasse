@@ -2443,11 +2443,17 @@ div{
             max-width: 100%;
         }
     }
+
     &.floating-exists{
         .container-fluid{
             margin: auto;
             width: 85%;
             &.container-images{
+                width: auto;
+            }
+        }
+        .fullwidthimage{
+            .container-fluid{
                 width: auto;
             }
         }
@@ -2514,35 +2520,34 @@ div{
                 font-size: 26px;
                 padding-right: 12px;
 
-                &:before{
-                    content: "\f054";
-                    font-family: FontAwesome;
-                    background-color: @btnBackground;
-                    color: @color_two;
-                    display: block;
-                    float: right;
-                    font-size: @baseFontSize - 4;
-                    margin-left: 5px;
-                    margin-top: 7px;
-                    min-height: 10px;
-                    padding:7px 9px 5px;
-                    .border-radius(5px);
-                }
-
-                &:hover{
-                    &:before{
-                        cursor: pointer;
-                        background-color: @btnBackgroundHover;
-                    }
-                }
-
-                &:focus{
-                    &:before{
-                        background-color: @btnBackgroundFocus;
-                    }
-                }
-                a{
+                a {
                     color: @textColor;
+                    &:before{
+                        content: "\f054";
+                        font-family: FontAwesome;
+                        background-color: @btnBackground;
+                        color: @color_two;
+                        display: block;
+                        float: right;
+                        font-size: @baseFontSize - 4;
+                        margin-left: 5px;
+                        margin-top: 7px;
+                        min-height: 10px;
+                        padding:7px 9px 5px;
+                        .border-radius(5px);
+                    }
+                    &:hover{
+                        &:before{
+                            cursor: pointer;
+                            background-color: @btnBackgroundHover;
+                        }
+                    }
+
+                    &:focus{
+                        &:before{
+                            background-color: @btnBackgroundFocus;
+                        }
+                    }
                 }
             }
         }
@@ -2556,34 +2561,35 @@ div{
             font-size: @baseFontSize + 6;
             padding-left: 12px;
 
-            &:before{
-                content: "\f054";
-                font-family: FontAwesome;
-                background-color: @btnBackground;
-                color: @color_two;
-                display: block;
-                float: right;
-                font-size: @baseFontSize - 4;
-                margin-left: 5px;
-                margin-top: 5px;
-                min-height: 10px;
-                padding:7px 9px 5px;
-                .border-radius(5px);
-            }
-            &:hover{
-                &:before{
-                    cursor: pointer;
-                    background-color: @btnBackgroundHover;
-                }
-            }
-
-            &:focus{
-                &:before{
-                    background-color: @btnBackgroundFocus;
-                }
-            }
-            a{
+            a {
                 color: @textColor;
+                &:before{
+                    content: "\f054";
+                    font-family: FontAwesome;
+                    background-color: @btnBackground;
+                    color: @color_two;
+                    display: block;
+                    float: right;
+                    font-size: @baseFontSize - 4;
+                    margin-left: 5px;
+                    margin-top: 5px;
+                    min-height: 10px;
+                    padding:7px 9px 5px;
+                    .border-radius(5px);
+                }
+                &:hover{
+                    &:before{
+                        cursor: pointer;
+                        background-color: @btnBackgroundHover;
+                    }
+                }
+                &:focus{
+
+                    &:before{
+                        background-color: @btnBackgroundFocus;
+                    }
+                }
+
             }
         }
     }
