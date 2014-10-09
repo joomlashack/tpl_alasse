@@ -12,9 +12,9 @@
 // no direct access
 defined('_JEXEC') or die;
 
-    $wrightNewsEnableIcons = false;
-    $wrightImageFirst = true;
     $wrightEnableIntroText = false;
+    $wrightImageFirst = true;
+    $wrightNewsEnableIcons = false;
 
 include(Overrider::getOverride('mod_articles_news','horizontal'));
 ?>

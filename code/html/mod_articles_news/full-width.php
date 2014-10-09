@@ -12,12 +12,11 @@
 // no direct access
 defined('_JEXEC') or die;
 
-    $wrightNewsEnableIcons = false;
-    $wrightImageFirst = true;
-    $wrightEnableIntroText = false;
-    $wrightMaxColumns = 2;
-
     $wrightDivideRows = true;
+    $wrightEnableIntroText = false;
+    $wrightImageFirst = true;
+    $wrightMaxColumns = 2;
+    $wrightNewsEnableIcons = false;
 
 include(Overrider::getOverride('mod_articles_news','horizontal'));
 ?>
