@@ -72,18 +72,20 @@ defined('_JEXEC') or die('Restricted access');
             ?>
         </header>
 
-        <div class="<?php echo $wrightContainerClass ?>">
-            <?php if ($this->countModules('grid-top')) : ?>
-            <div id="grid-top" class="container-alasse">
+        <?php if ($this->countModules('grid-top')) : ?>
+        <div id="grid-top">
+            <div class="<?php echo $gtContainerClass; ?> container-alasse">
                 <w:module type="row-fluid" name="grid-top" chrome="wrightflexgrid" />
             </div>
-            <?php endif; ?>
-            <?php if ($this->countModules('grid-top2')) : ?>
-            <div id="grid-top2" class="container-alasse">
+        </div>
+        <?php endif; ?>
+        <?php if ($this->countModules('grid-top2')) : ?>
+        <div id="grid-top2">
+            <div class="<?php echo $gt2ContainerClass; ?> container-alasse">
                 <w:module type="row-fluid" name="grid-top2" chrome="wrightflexgrid" />
             </div>
-            <?php endif; ?>
         </div>
+        <?php endif; ?>
 
         <div class="bg-sidebar">
             <div class="bg-sidebar-inner"></div>
@@ -152,14 +154,14 @@ defined('_JEXEC') or die('Restricted access');
 
         <?php if ($this->countModules('grid-bottom')) : ?>
         <div id="grid-bottom">
-            <div class="<?php echo $wrightContainerClass; ?> container-alasse">
+            <div class="<?php echo $gbContainerClass; ?> container-alasse">
                 <w:module type="row-fluid" name="grid-bottom" chrome="wrightflexgrid" />
             </div>
         </div>
         <?php endif; ?>
 
         <?php if ($this->countModules('grid-bottom2')) : ?>
-        <div id="grid-bottom2" class="<?php echo $wrightContainerClass; ?> container-alasse">
+        <div id="grid-bottom2" class="<?php echo $gb2ContainerClass; ?> container-alasse">
             <w:module type="row-fluid" name="grid-bottom2" chrome="wrightflexgrid" />
         </div>
         <?php endif; ?>

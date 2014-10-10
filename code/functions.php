@@ -153,3 +153,20 @@ if ($alasseFullWidthBg && !$sidebarExists)
 	$mainComplementGridMode = 'row-fluid';
 	$mainComplementSpan = 'span12';
 }
+
+// Grids full widht option
+$gbFullWidth = $this->params->get('grid_bottom_full_width_mode','0');
+$gbContainerClass = ($gbFullWidth) ? 'container-fluid' : $wrightContainerClass;
+$gbRowClass = ($gbFullWidth) ? 'row-fluid' : $wrightGridMode;
+
+$gb2FullWidth = $this->params->get('grid_bottom2_full_width_mode','0');
+$gb2ContainerClass = ($gb2FullWidth) ? 'container-fluid' : $wrightContainerClass;
+$gb2RowClass = ($gb2FullWidth) ? 'row-fluid' : $wrightGridMode;
+
+$gtFullWidth = $this->params->get('grid_top_full_width_mode','0');
+$gtContainerClass = ($gtFullWidth) ? 'container-fluid' : $wrightContainerClass;
+$gtRowClass = ($gtFullWidth) ? 'row-fluid' : $wrightGridMode;
+
+$gt2FullWidth = $this->params->get('grid_top2_full_width_mode','0');
+$gt2ContainerClass = ($gt2FullWidth) ? 'container-fluid' : $wrightContainerClass;
+$gt2RowClass = ($gt2FullWidth) ? 'row-fluid' : $wrightGridMode;

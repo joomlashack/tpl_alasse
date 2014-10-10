@@ -112,6 +112,26 @@
 					<option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
+				<field name="grid_top_full_width_mode" type="list" default="0"
+					label="TPL_JS_GB_TOP_FULL_WIDTH_MODE" description="TPL_JS_GB_TOP_FULL_WIDTH_MODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="grid_top2_full_width_mode" type="list" default="0"
+					label="TPL_JS_GB_TOP2_FULL_WIDTH_MODE" description="TPL_JS_GB_TOP2_FULL_WIDTH_MODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="grid_bottom_full_width_mode" type="list" default="0"
+					label="TPL_JS_GB_BOTTOM_FULL_WIDTH_MODE" description="TPL_JS_GB_BOTTOM_FULL_WIDTH_MODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="grid_bottom2_full_width_mode" type="list" default="0"
+					label="TPL_JS_GB_BOTTOM2_FULL_WIDTH_MODE" description="TPL_JS_GB_BOTTOM2_FULL_WIDTH_MODE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
 			</fieldset>
 		</fields>
 	</config>
