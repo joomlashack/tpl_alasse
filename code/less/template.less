@@ -799,6 +799,13 @@ input[type="file"] {
         margin-left: 0;
     }
 }
+.row-fluid {
+    [class*="span"]{
+        + .span12 {
+            margin-left: 0;
+        }
+    }
+}
 // ----------------------------------------------------------------------------------
 
 .controls-row [class*="span"] + [class*="span"] {
@@ -2513,8 +2520,15 @@ div{
 
         &.container-alasse {
             [class*="module"]{
-                > h3{
-                    padding-left: 20px;
+                &:first-child{
+                    > h3{
+                        padding-left: 20px;
+                    }
+                }
+                &:last-child{
+                    > h3{
+                        padding-right: 20px;
+                    }
                 }
             }
         }

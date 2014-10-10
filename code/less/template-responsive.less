@@ -27,6 +27,18 @@
         height: auto !important;
         width: 100% !important;
     }
+    [class*="span"]{
+        + .span12 {
+            margin-left: 0;
+        }
+    }
+    .row-fluid {
+        [class*="span"]{
+            + .span12 {
+                margin-left: 0;
+            }
+        }
+    }
 }
 
 @media (min-width: 1278px) {
@@ -112,6 +124,18 @@
         .moduletable_slider{
             margin: 0;
             max-width: 100%;
+        }
+    }
+    [class*="span"]{
+        + .span12 {
+            margin-left: 0;
+        }
+    }
+    .row-fluid {
+        [class*="span"]{
+            + .span12 {
+                margin-left: 0;
+            }
         }
     }
 }
