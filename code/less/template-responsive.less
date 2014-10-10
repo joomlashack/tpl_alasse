@@ -273,7 +273,13 @@
     .floating-exists{
         .container-fluid{
             width: 80%;
-            &.container-images{
+            &.container-images,
+            &.container-alasse{
+                width: auto;
+            }
+        }
+        .fullwidthimage{
+            .container-fluid{
                 width: auto;
             }
         }
@@ -348,6 +354,11 @@
         &.floating-exists{
             .container-fluid{
                 width: auto;
+            }
+            .fullwidthimage{
+                .container-fluid{
+                    width: auto;
+                }
             }
         }
     }
