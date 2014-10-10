@@ -364,12 +364,9 @@ blockquote{
 .btn{
     .border-radius(40px);
     .box-shadow(none);
-    .box-sizing(border-box);
     background-image: none;
     color: @color_two;
-    min-height: 33px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 5px 20px;
     text-shadow: none;
 
     &.btn-large{
@@ -785,7 +782,6 @@ select,
 input[type="file"] {
     &[class*="span"]{
         padding: 0 5px;
-        .box-sizing(content-box);
     }
 }
 
@@ -1273,10 +1269,11 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-    min-height: 23px;
-
+    padding-top: 5px;
+    padding-bottom: 5px;
     &[class*="span"]{
         .box-sizing(content-box);
+        min-height: 10px;
         &:first-child{
             padding-left: 14px;
         }
@@ -1284,41 +1281,10 @@ input[type="color"],
             padding-right: 14px;
         }
     }
-
-
-    &.input-block-level {
-        min-height: 33px;
-    }
 }
-
-.row-fluid{
-    textarea,
-    input[type="text"],
-    input[type="password"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="date"],
-    input[type="month"],
-    input[type="time"],
-    input[type="week"],
-    input[type="number"],
-    input[type="email"],
-    input[type="url"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="color"],
-    .uneditable-input {
-        min-height: 23px;
-    }
-}
-
-
-.input-append,
-.input-prepend {
-    .add-on {
-        min-height: 23px;
-    }
-
+.input-append .add-on, .input-prepend .add-on{
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 .input-append {
     .btn-group{
@@ -1665,8 +1631,6 @@ input[type="color"],
     .uneditable-input {
         line-height: 18px;
         max-width: 100%;
-        min-height: 31px;
-        .box-sizing(border-box);
     }
 
     .btn,
@@ -1940,13 +1904,6 @@ input[type="color"],
                 }
             }
         }
-    }
-
-    input[type='text'],
-    input[type='password'],
-    input[type='submit'],
-    input[type='button']{
-        .box-sizing(content-box)
     }
 
     input {

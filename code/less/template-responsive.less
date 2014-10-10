@@ -452,17 +452,6 @@
         }
     }
 
-    #finder-search,
-    .filter-search {
-        input{
-            min-height: 30px;
-        }
-    }
-
-    .filter-search select, .filter-search input{
-        .box-sizing(border-box);
-    }
-
     #finder-search{
         .well{
             > * {
@@ -683,5 +672,46 @@
             }
         }
     }
+    dl.tabs.nav+.current {
+        padding: 0;
+    }
+    .input-prepend,
+    .input-append{
+        input {
+            max-width: 94px;
+        }
+    }
+    .form-search .input-append, .form-inline .input-append, .form-search .input-prepend, .form-inline .input-prepend {
+        margin-bottom: 10px;
+    }
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"],
+    .uneditable-input {
+        &[class*="span"]{
+            max-width: 90%;
+        }
+    }
+    div {
+        .bs-docs-example {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
 
+    .row-fluid .controls-row [class*="span"]+[class*="span"]{
+        margin-left: 0;
+    }
 }
