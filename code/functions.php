@@ -25,7 +25,7 @@ $wrightBodyClass .= ($this->countModules('floating')) ? ' floating-exists' : '';
 $wrightBodyClass .= ' ' . $wrightContainerClass . '-mode';
 
 // Toolbar is Displayed
-$alasseToolbarDisplayed = ($this->params->get('alasse_toolbar_displayed','1') == '1' ? true : false);
+$alasseToolbarDisplayed = ($this->params->get('alasse_toolbar_displayed', '1') == '1' ? true : false);
 
 // Use full width only if it's a blog or featured articles view
 $paramOption = $input->getVar('option', '');
@@ -34,6 +34,10 @@ $paramLayout = $input->getVar('layout', 'default');
 $paramItemid = $input->getVar('Itemid', '');
 $paramId = $input->getVar('id', '');
 
+// Single article image (full image)
+$wrightSingleArticleImage = '';
+$wrightSingleArticleAlt = '';
+
 // Checks the right layout of the category, depending if it's set on the menu item or if it has to look for the category layout or default com_content layout for blogs
 if ($paramOption == 'com_content' && $paramView == 'category')
 {
@@ -41,6 +45,7 @@ if ($paramOption == 'com_content' && $paramView == 'category')
 	$defaultCategoryLayout = true;
 
 	$menuItem = $menu->getActive();
+
 	if ($menuItem)
 	{
 		if ($paramId == $menuItem->query['id'])
@@ -57,9 +62,11 @@ if ($paramOption == 'com_content' && $paramView == 'category')
 			->from($db->qn('#__categories'))
 			->where($db->qn('id') . ' = ' . (int) $paramId);
 		$db->setQuery($query);
+
 		if ($rawparams = $db->loadResult())
 		{
-			$params = new JRegistry();
+			$params = new JRegistry;
+
 			if (version_compare(JVERSION, '3.0', 'ge'))
 			{
 				$params->loadString($rawparams, 'JSON');
@@ -68,6 +75,7 @@ if ($paramOption == 'com_content' && $paramView == 'category')
 			{
 				$params->loadJSON($rawparams);
 			}
+
 			$paramLayout = $params->get('category_layout', '');
 
 			if ($paramLayout == '')
@@ -77,9 +85,11 @@ if ($paramOption == 'com_content' && $paramView == 'category')
 					->from($db->qn('#__extensions'))
 					->where($db->qn('name') . ' = ' . $db->q('com_content'));
 				$db->setQuery($query);
+
 				if ($rawparams = $db->loadResult())
 				{
-					$params = new JRegistry();
+					$params = new JRegistry;
+
 					if (version_compare(JVERSION, '3.0', 'ge'))
 					{
 						$params->loadString($rawparams, 'JSON');
@@ -88,13 +98,37 @@ if ($paramOption == 'com_content' && $paramView == 'category')
 					{
 						$params->loadJSON($rawparams);
 					}
+
 					$paramLayout = $params->get('category_layout', '');
+
 					if ($paramLayout == '_:blog')
 					{
 						$paramLayout = 'blog';
 					}
 				}
 			}
+		}
+	}
+}
+elseif ($paramOption == 'com_content' && $paramView == 'article')
+{
+	$db = JFactory::getDbo();
+	$query = $db->getQuery(true);
+	$query->select($db->qn('images'))
+		->from($db->qn('#__content'))
+		->where($db->qn('id') . ' = ' . (int) $paramId);
+	$db->setQuery($query);
+
+	$images = $db->loadResult();
+
+	if ($images != '')
+	{
+		$imagesArray = json_decode($images);
+
+		if ($imagesArray->image_fulltext != '')
+		{
+			$wrightSingleArticleImage = $imagesArray->image_fulltext;
+			$wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
 		}
 	}
 }
@@ -111,11 +145,11 @@ $mainComplementSpan = '';
 
 if ($alasseFullWidthBg && !$sidebarExists)
 {
-    $mainContainer = '';
-    $mainGridMode = '';
-    $mainSpan = '';
-    $wrightTemplate->useMainSpans = false;
-    $mainComplementContainer = $wrightContainerClass;
-    $mainComplementGridMode = 'row-fluid';
-    $mainComplementSpan = 'span12';
+	$mainContainer = '';
+	$mainGridMode = '';
+	$mainSpan = '';
+	$wrightTemplate->useMainSpans = false;
+	$mainComplementContainer = $wrightContainerClass;
+	$mainComplementGridMode = 'row-fluid';
+	$mainComplementSpan = 'span12';
 }

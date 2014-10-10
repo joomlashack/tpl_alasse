@@ -60,9 +60,16 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
 
+            <?php
+                if ($wrightSingleArticleImage != '')
+                    :
+            ?>
             <div class="img-full-none">
-                <img src="http://placekitten.com/1170/500" alt="">
+                <img src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
             </div>
+            <?php
+                endif;
+            ?>
         </header>
 
         <div class="<?php echo $wrightContainerClass ?>">
