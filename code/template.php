@@ -64,7 +64,7 @@ defined('_JEXEC') or die('Restricted access');
                 if ($wrightSingleArticleImage != '')
                     :
             ?>
-            <div class="img-full-none">
+            <div class="full-image">
                 <img src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
             </div>
             <?php
