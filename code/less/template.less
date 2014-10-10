@@ -945,6 +945,20 @@ input[type="file"] {
             margin-top: 0;
         }
     }
+    &.container-fluid {
+        [class*="module"] {
+            &:first-child {
+                > h3 {
+                    padding-left: 20px;
+                }
+            }
+            &:last-child {
+                > h3 {
+                    padding-right: 20px;
+                }
+            }
+        }
+    }
 }
 
 #grid-bottom{

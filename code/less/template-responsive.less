@@ -607,8 +607,38 @@
         &.container-images{
             display: none;
         }
+        &.full{
+            [class*="module"] {
+                &:first-child {
+                    > h3 {
+                        padding-left: 0;
+                    }
+                }
+                &:last-child {
+                    > h3 {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
     }
 
+    #grid-bottom2{
+        &.container-fluid {
+            [class*="module"] {
+                &:first-child {
+                    > h3 {
+                        padding-left: 0;
+                    }
+                }
+                &:last-child {
+                    > h3 {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
     .blog,
     .blog-featured {
         .container-images + div {
