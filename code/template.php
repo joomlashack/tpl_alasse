@@ -59,6 +59,10 @@ defined('_JEXEC') or die('Restricted access');
                 <w:module type="none" name="featured" chrome="xhtml" />
             </div>
             <?php endif; ?>
+
+            <div class="img-full-none">
+                <img src="http://placekitten.com/1170/500" alt="">
+            </div>
         </header>
 
         <div class="<?php echo $wrightContainerClass ?>">
