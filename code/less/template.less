@@ -812,9 +812,6 @@ input[type="file"] {
 #main-content{
     margin: 0;
 }
-#main{
-    padding-top: 10px;
-}
 #sidebar2{
     [class*="newsflash-vert"]{
         [class*="newsflash-title"]{
@@ -2349,7 +2346,6 @@ div{
 .breadcrumb{
     background-color: transparent;
     line-height: 15px;
-    padding: 0;
 
     > li {
         a{
@@ -2383,6 +2379,18 @@ div{
                 display: none;
             }
 
+        }
+    }
+}
+
+#main {
+    > .breadcrumb {
+        padding: 10px 0 0;
+    }
+
+    &[class*="span"] {
+        > .breadcrumb {
+            padding-top: 0;
         }
     }
 }
