@@ -875,6 +875,15 @@ input[type="file"] {
     }
 }
 
+.bg-sidebar{
+    + #grid-bottom2{
+        padding: 0;
+        [class*="span"]{
+            padding: 0;
+        }
+    }
+}
+
 // ----------------------------------------------------------------------------------
 
 .well{
@@ -1124,6 +1133,8 @@ input[type="file"] {
             .full_elements();
 
             > [class*="span"] {
+                padding-top: 0;
+
                 > [class*="img-intro-"],
                 > .item-image{
                     width: 100%;
