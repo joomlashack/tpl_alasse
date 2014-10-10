@@ -2517,11 +2517,12 @@ div{
 
         &:hover{
             background-color: transparent;
+            color: @linkColorHover;
         }
 
         &:focus{
             background-color: transparent;
-            color: @textColor;
+            color: @linkColorHover;
             .icon-chevron-right{
                 background-color: @btnBackgroundFocus;
                 color: @btnColorFocus
@@ -2561,6 +2562,8 @@ div{
                         .border-radius(5px);
                     }
                     &:hover{
+                        color: @linkColorHover;
+                        text-decoration: none;
                         &:before{
                             cursor: pointer;
                             background-color: @btnBackgroundHover;
@@ -2568,6 +2571,8 @@ div{
                     }
 
                     &:focus{
+                        color: @linkColorHover;
+                        text-decoration: none;
                         &:before{
                             background-color: @btnBackgroundFocus;
                         }
@@ -2602,13 +2607,16 @@ div{
                     .border-radius(5px);
                 }
                 &:hover{
+                    color: @linkColorHover;
+                    text-decoration: none;
                     &:before{
                         cursor: pointer;
                         background-color: @btnBackgroundHover;
                     }
                 }
                 &:focus{
-
+                    color: @linkColorHover;
+                    text-decoration: none;
                     &:before{
                         background-color: @btnBackgroundFocus;
                     }
@@ -2687,6 +2695,12 @@ div{
         h2{
             color: @linkColor;
             font-size: @baseFontSize + 18;
+            a{
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
