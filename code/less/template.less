@@ -23,6 +23,52 @@
     }
 }
 
+.full_elements() {
+    [class*="span"]{
+        margin-left: 0;
+        img{
+            width: 100%;
+        }
+    }
+
+    .span1{
+        width: 8%;
+    }
+    .span2{
+        width: 16%;
+    }
+    .span3{
+        width: 25%;
+    }
+    .span4{
+        width: 33%;
+    }
+    .span5{
+        width: 42%;
+    }
+    .span6{
+        width: 50%;
+    }
+    .span7{
+        width: 58%;
+    }
+    .span8{
+        width: 67%;
+    }
+    .span9{
+        width: 75%;
+    }
+    .span10{
+        width: 84%;
+    }
+    .span11{
+        width: 92%;
+    }
+    .span12{
+        width: 100%;
+    }
+}
+
 .is_internet.v_8,
 .is_internet.v_9{
     &.sb2 {
@@ -1038,6 +1084,27 @@ input[type="file"] {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+
+    &.divided .row-fluid {
+        .full_elements();
+
+        > [class*="span"] {
+            > [class*="img-intro-"],
+            > .item-image{
+                width: 100%;
+                > * {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media (max-width : 767px) {
+            .full_elements();
+            > [class*="span"] {
+                float: left;
+            }
+        }
     }
 }
 [class*="newsflash-vert"]{
@@ -2342,51 +2409,7 @@ div{
 
     &.container-images{
         padding: 0;
-
-        [class*="span"]{
-            margin-left: 0;
-            img{
-                width: 100%;
-            }
-        }
-
-        .span1{
-            width: 8%;
-        }
-        .span2{
-            width: 16%;
-        }
-        .span3{
-            width: 25%;
-        }
-        .span4{
-            width: 33%;
-        }
-        .span5{
-            width: 42%;
-        }
-        .span6{
-            width: 50%;
-        }
-        .span7{
-            width: 58%;
-        }
-        .span8{
-            width: 67%;
-        }
-        .span9{
-            width: 75%;
-        }
-        .span10{
-            width: 84%;
-        }
-        .span11{
-            width: 92%;
-        }
-        .span12{
-            width: 100%;
-        }
-
+        .full_elements();
     }
 
     &.no-padding{
