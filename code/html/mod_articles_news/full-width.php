@@ -15,6 +15,13 @@ defined('_JEXEC') or die;
 $wrightNewsEnableIcons = false;
 $wrightImageFirst = true;
 $wrightEnableIntroText = false;
+$wrightMaxColumns = 2;
+
+$wrightDivideRows = true;
+$wrightDivideRowsContainer1 = '';
+$wrightDivideRowsContainer2 = 'container';
+
+$wrightGeneralClass = 'divided';
 
 include(Overrider::getOverride('mod_articles_news','horizontal'));
 ?>
