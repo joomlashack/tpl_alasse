@@ -175,6 +175,9 @@ h6{
     #menu2{
         a{
             color: @color_two;
+            &:hover {
+                text-decoration: none;
+            }
         }
 
         .nav {
@@ -270,6 +273,15 @@ h6{
 #logo{
     padding-top: 10px;
     padding-bottom: 20px;
+    a {
+        color: @color_two;
+        .transition(all .1s ease-in-out);
+
+        &:hover , &:focus {
+            color: @color_three;
+            text-decoration: none;
+        }
+    }
 }
 #menu{
     .nav{
