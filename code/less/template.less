@@ -2405,11 +2405,15 @@ div{
         }
     }
 
-    #sliderContainer div img.fillHeight,
-    #sliderContainer div img.fillWidth{
-        height: 100% !important;
-        max-width: none;
-        width: auto !important;
+    #sliderContainer {
+        overflow: hidden;
+
+        div img.fillHeight,
+        div img.fillWidth{
+            height: 100% !important;
+            max-width: none;
+            width: auto !important;
+        }
     }
 
     .slidermanImgCont div {
