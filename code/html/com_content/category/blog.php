@@ -40,13 +40,7 @@ else
 
 $this->wrightLeadingItemElementsStructure = Array(
 	'div.fullwidthimage',
-		'div.container-fluid',
-			'div.row-fluid',
-				'div.span12',
-					'image',
-				'/div',
-			'/div',
-		'/div',
+		'image',
 	'/div',
 	'div.' . $this->wrightNonContentContainer,
 		'div.row-fluid',
