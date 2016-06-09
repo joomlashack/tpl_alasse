@@ -635,6 +635,15 @@ blockquote{
             }
         }
     }
+	.no-padding {
+		.row,
+	    .row-fluid {
+	        > [class*="span"]{
+	            padding: 0 0;
+	        }
+	    }
+	}
+
     .fullwidthimage{
         .row-fluid {
             > [class*="span"]{
@@ -2765,6 +2774,11 @@ div{
     }
 }
 
+.page-header {
+	border: 0;
+	padding-bottom: 0;
+}
+
 .reset{
     .form-actions{
         padding-left: 19px;
@@ -2833,6 +2847,3 @@ div{
         }
     }
 }
-
-
-
