@@ -34,7 +34,7 @@ if (!$sidebarExists)
 }
 else
 {
-	$this->wrightNonContentContainer = 'container-fluid';
+	$this->wrightNonContentContainer = 'no-padding';
     $this->wrightContentExtraContainer = 'container-fluid no-padding';
 }
 

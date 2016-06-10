@@ -145,6 +145,7 @@
 
 h1{
     font-size: 33px;
+	margin: 20px 0 30px;
 }
 h2{
     font-size: 27px;
@@ -2542,6 +2543,16 @@ div{
         }
     }
 
+}
+
+.blog, .blog-featured {
+	.container-fluid, .no-padding {
+		+ div  {
+			h2:first-child {
+				margin-top: 0;
+			}
+		}
+	}
 }
 
 .sb1,
