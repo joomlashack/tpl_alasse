@@ -2,10 +2,10 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
 <extension version="2.5" type="template" method="upgrade" client="site">
 	<name>js_alasse</name>
-	<creationDate>June 2016</creationDate>
+	<creationDate>July 2016</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
-	<authorUrl>http://www.joomlashack.com</authorUrl>
+	<authorUrl>https://www.joomlashack.com</authorUrl>
 	<copyright>Copyright Joomlashack 2005 - 2016. All rights reserved</copyright>
 	<license>GNU GPLv2</license>
 	<version>1.0.2</version>
@@ -67,7 +67,7 @@
 				    <option value="1">JYES</option>
 				    <option value="0">JNO</option>
  				</field>
-				<field name="style" type="styles" default="generic" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
+				<field name="style" type="styles" default="cyan" label="TPL_JS_WRIGHT_FIELD_STYLE_LABEL" description="TPL_JS_WRIGHT_FIELD_STYLE_DESC" />
 				<field name="lesscompile" type="radio" class="btn-group btn-group-yesno" default="0" label="TPL_JS_WRIGHT_LESS_COMPILE" description="TPL_JS_WRIGHT_LESS_COMPILE_DESC">
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
