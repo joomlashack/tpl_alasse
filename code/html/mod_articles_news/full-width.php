@@ -23,5 +23,5 @@ $wrightDivideRowsContainer2 = 'container';
 
 $wrightGeneralClass = 'divided';
 
-include(Overrider::getOverride('mod_articles_news','horizontal'));
-?>
+require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
+require(Overrider::getOverride('mod_articles_news','horizontal'));

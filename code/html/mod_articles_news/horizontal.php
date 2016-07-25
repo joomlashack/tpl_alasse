@@ -1,4 +1,3 @@
-
 <?php
 // Wright v.3 Override: Joomla 2.5.16 and 3.2
 /**
@@ -16,5 +15,5 @@ $wrightNewsEnableIcons = false;
 $wrightImageFirst = true;
 $wrightEnableIntroText = false;
 
-include(Overrider::getOverride('mod_articles_news','horizontal'));
-?>
+require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
+require(Overrider::getOverride('mod_articles_news','horizontal'));
