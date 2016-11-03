@@ -102,8 +102,10 @@ defined('_JEXEC') or die('Restricted access');
 							<div class="<?php echo $mainComplementContainer ?>">
 								<div class="<?php echo $mainComplementGridMode ?>">
 									<div class="<?php echo $mainComplementSpan ?>">
-						<?php endif; ?>
-
+                        <?php endif; ?>
+                        <?php if ($alasseFullWidthBg) : ?>
+                        <div class="<?php echo $wrightContainerClass; ?>">
+                        <?php endif; ?>
                         <?php if ($this->countModules('above-content')) : ?>
                         <div id="above-content">
                             <w:module type="none" name="above-content" chrome="xhtmlwright" />
@@ -114,7 +116,9 @@ defined('_JEXEC') or die('Restricted access');
                                 <w:module type="single" name="breadcrumbs" chrome="none" />
                         </div>
                         <?php endif; ?>
-
+                        <?php if ($alasseFullWidthBg) : ?>
+                        </div>
+                        <?php endif; ?>
 
 						<?php if ($mainComplementContainer == '') : ?>
 									</div>
@@ -130,13 +134,17 @@ defined('_JEXEC') or die('Restricted access');
 								<div class="<?php echo $mainComplementGridMode ?>">
 									<div class="<?php echo $mainComplementSpan ?>">
 						<?php endif; ?>
-
+                        <?php if ($alasseFullWidthBg) : ?>
+                        <div class="<?php echo $wrightContainerClass; ?>">
+                        <?php endif; ?>
                         <?php if ($this->countModules('below-content')) : ?>
                         <div id="below-content">
                             <w:module type="none" name="below-content" chrome="xhtmlwright" />
                         </div>
                         <?php endif; ?>
-
+                        <?php if ($alasseFullWidthBg) : ?>
+                        </div>
+                        <?php endif; ?>
 						<?php if ($mainComplementContainer == '') : ?>
 									</div>
 								</div>
@@ -200,5 +208,30 @@ defined('_JEXEC') or die('Restricted access');
             }
         }
         ?>
+
+        <script>
+            jQuery(document).ready(function($) {
+                function mobileMenu (string) {
+                    if (jQuery(window).width() < 767) {
+                        jQuery(string + ' li.parent').each(function () {
+                            var classId = jQuery(this).attr("class");
+                            var classContent = classId.split(" ");
+                            jQuery(this).children('a').attr("data-toggle", "collapse");
+                            jQuery(this).children('a').attr("href", "#");
+                            jQuery(this).children("ul").addClass("collapse");
+                            jQuery(this).children('ul').attr("id", classContent[0]);
+                            jQuery(this).children('ul').css("display", "block");
+                            jQuery(this).children('a').attr("data-target", "#" + classContent[0]);
+                        });
+                    }
+                }
+
+                mobileMenu("#toolbar");
+
+                jQuery(window).resize(function () {
+                    mobileMenu("#toolbar");
+                });
+            });
+        </script>
     </body>
 </html>
