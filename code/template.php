@@ -208,30 +208,5 @@ defined('_JEXEC') or die('Restricted access');
             }
         }
         ?>
-
-        <script>
-            jQuery(document).ready(function($) {
-                function mobileMenu (string) {
-                    if (jQuery(window).width() < 767) {
-                        jQuery(string + ' li.parent').each(function () {
-                            var classId = jQuery(this).attr("class");
-                            var classContent = classId.split(" ");
-                            jQuery(this).children('a').attr("data-toggle", "collapse");
-                            jQuery(this).children('a').attr("href", "#");
-                            jQuery(this).children("ul").addClass("collapse");
-                            jQuery(this).children('ul').attr("id", classContent[0]);
-                            jQuery(this).children('ul').css("display", "block");
-                            jQuery(this).children('a').attr("data-target", "#" + classContent[0]);
-                        });
-                    }
-                }
-
-                mobileMenu("#toolbar");
-
-                jQuery(window).resize(function () {
-                    mobileMenu("#toolbar");
-                });
-            });
-        </script>
     </body>
 </html>
