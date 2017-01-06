@@ -43,20 +43,20 @@ defined('_JEXEC') or die('Restricted access');
                 </div>
                 <?php if ($this->countModules('top')) : ?>
                 <div id="top">
-                    <w:module type="none" name="top" chrome="xhtmlwright" />
+                    <w:module type="none" name="top" chrome="wrightxhtml" />
                 </div>
                 <?php endif; ?>
             </div>
 
             <?php if ($this->countModules('floating')) : ?>
             <div id="floating">
-                <w:module type="none" name="floating" chrome="xhtmlwright" />
+                <w:module type="none" name="floating" chrome="wrightxhtml" />
             </div>
             <?php endif; ?>
 
             <?php if ($this->countModules('featured')) : ?>
             <div id="featured">
-                <w:module type="none" name="featured" chrome="xhtmlwright" />
+                <w:module type="none" name="featured" chrome="wrightxhtml" />
             </div>
             <?php endif; ?>
 
@@ -93,7 +93,7 @@ defined('_JEXEC') or die('Restricted access');
                 <div id="main-content" class="<?php echo $mainGridMode ?>">
                     <!-- sidebar1 -->
                     <aside id="sidebar1">
-                        <w:module name="sidebar1" chrome="xhtmlwright" />
+                        <w:module name="sidebar1" chrome="wrightxhtml" />
                     </aside>
                     <!-- main -->
                     <section id="main">
@@ -108,7 +108,7 @@ defined('_JEXEC') or die('Restricted access');
                         <?php endif; ?>
                         <?php if ($this->countModules('above-content')) : ?>
                         <div id="above-content">
-                            <w:module type="none" name="above-content" chrome="xhtmlwright" />
+                            <w:module type="none" name="above-content" chrome="wrightxhtml" />
                         </div>
                         <?php endif; ?>
                         <?php if ($this->countModules('breadcrumbs')) : ?>
@@ -139,7 +139,7 @@ defined('_JEXEC') or die('Restricted access');
                         <?php endif; ?>
                         <?php if ($this->countModules('below-content')) : ?>
                         <div id="below-content">
-                            <w:module type="none" name="below-content" chrome="xhtmlwright" />
+                            <w:module type="none" name="below-content" chrome="wrightxhtml" />
                         </div>
                         <?php endif; ?>
                         <?php if ($alasseFullWidthBg) : ?>
@@ -154,7 +154,7 @@ defined('_JEXEC') or die('Restricted access');
 
                     <!-- sidebar2 -->
                     <aside id="sidebar2">
-                        <w:module name="sidebar2" chrome="xhtmlwright" />
+                        <w:module name="sidebar2" chrome="wrightxhtml" />
                     </aside>
                 </div>
             </div>
