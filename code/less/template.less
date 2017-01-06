@@ -145,6 +145,7 @@
 
 h1{
     font-size: 33px;
+	margin: 20px 0 30px;
 }
 h2{
     font-size: 27px;
@@ -635,6 +636,15 @@ blockquote{
             }
         }
     }
+	.no-padding {
+		.row,
+	    .row-fluid {
+	        > [class*="span"]{
+	            padding: 0 0;
+	        }
+	    }
+	}
+
     .fullwidthimage{
         .row-fluid {
             > [class*="span"]{
@@ -2471,14 +2481,8 @@ div{
 }
 
 #main {
-    > .breadcrumb {
-        padding: 10px 0 0;
-    }
-
-    &[class*="span"] {
-        .breadcrumb {
-            padding: 0;
-        }
+    .breadcrumb {
+        padding: 0;
     }
 }
 
@@ -2533,6 +2537,16 @@ div{
         }
     }
 
+}
+
+.blog, .blog-featured {
+	.container-fluid, .no-padding {
+		+ div  {
+			h2:first-child {
+				margin-top: 0;
+			}
+		}
+	}
 }
 
 .sb1,
@@ -2765,6 +2779,11 @@ div{
     }
 }
 
+.page-header {
+	border: 0;
+	padding-bottom: 0;
+}
+
 .reset{
     .form-actions{
         padding-left: 19px;
@@ -2833,6 +2852,3 @@ div{
         }
     }
 }
-
-
-

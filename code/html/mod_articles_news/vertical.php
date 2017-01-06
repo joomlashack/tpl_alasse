@@ -14,5 +14,5 @@ defined('_JEXEC') or die;
 $wrightNewsEnableIcons = false;
 $wrightEnableIntroText = false;
 
+require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
 include(Overrider::getOverride('mod_articles_news','vertical'));
-?>
