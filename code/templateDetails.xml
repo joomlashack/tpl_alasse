@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.5/template-install.dtd">
-<extension version="2.5" type="template" method="upgrade" client="site">
+<extension version="3.0" type="template" method="upgrade" client="site">
 	<name>js_alasse</name>
-	<creationDate>January 2017</creationDate>
+	<creationDate>August 2 2017</creationDate>
 	<author>Joomlashack</author>
 	<authorEmail>support@joomlashack.com</authorEmail>
 	<authorUrl>https://www.joomlashack.com</authorUrl>
@@ -59,7 +59,7 @@
 	</positions>
 
 	<config>
-		<fields name="params" addfieldpath="/templates/js_alasse/wright/parameters/joomla_2.5">
+		<fields name="params" addfieldpath="/templates/js_alasse/wright/parameters/joomla_3.0">
 			<fieldset name="basic">
                 <!-- Start of default Wright params -->
 				<field name="wright" type="wright"/>
