@@ -13,7 +13,6 @@ defined('_JEXEC') or die;
 
 $wrightNewsEnableIcons = false;
 $wrightImageFirst = true;
-$wrightEnableIntroText = false;
 
 require_once(JPATH_THEMES.'/'.$app->getTemplate().'/'.'wright'.'/'.'html'.'/'.'overrider.php');
 require(Overrider::getOverride('mod_articles_news','horizontal'));
