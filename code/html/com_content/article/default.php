@@ -12,7 +12,17 @@ defined('_JEXEC') or die;
 
 $app = JFactory::getApplication();
 
-$this->wrightElementsStructure = Array("title","icons","article-info","legendtop","content","legendbottom");
+$this->wrightElementsStructure = Array(
+    "title",
+    "icons",
+    "article-info",
+    "legendtop",
+    "content",
+    "legendbottom",
+    "article-info-below",
+    "article-info-split",
+    "bottom"
+);
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';
 include Overrider::getOverride('com_content.article');
