@@ -18,7 +18,7 @@
   "title_tag":"h2",
   "description_show":"1",
   "description_width":"50",
-  "description_height":"50",
+  "description_height":"150",
   "description_color_flag":"1",
   "description_color":"FFFFFF",
   "description_bgcolor_flag":"1",
@@ -53,5 +53,5 @@
   "navigation_buttons_custom_nexthover":"",
   "moduleclass_sfx":"_slider",
   "container":"slider",
-  "includejquery":"off",
+  "includejquery":"off"
 }
