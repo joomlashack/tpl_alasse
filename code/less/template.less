@@ -660,7 +660,7 @@ blockquote{
     .row,
     .row-fluid {
         > [class*="span"]{
-            padding: 10px 0;
+            padding: 20px 0;
             .box-sizing(border-box);
 
             &:first-child{
@@ -907,11 +907,11 @@ input[type="file"] {
             background-color: @bodyBackground;
         }
         #main{
-            padding-right: 15px;
+            padding-right: 20px;
             padding-left: 5px;
 
             + #sidebar2{
-                padding-left: 5px;
+                padding-left: 20px;
             }
         }
     }
@@ -1048,26 +1048,47 @@ input[type="file"] {
     filter: none;
     border: 0;
     border-top: 8px solid @color_one;
+	color: @grayLighter;
 
-    .footer-content a:hover{
-        color: @color_two;
-    }
+    .footer-content a {
 
-    .module{
-        &.navbar{
+		&:hover,
+		&:active,
+		&:focus {
+			color: @white;
+		}
+	}
+
+    .module {
+
+        &.navbar {
+			margin-top: -10px;
+
             .nav {
-                li{
-                    > a{
+
+                li {
+
+                    > a {
+						color: @color_one;
+
+						&:hover,
+						&:focus,
+						&:active {
+							color: @white;
+						}
+
                         [class^="icon-"],
                         [class*=" icon-"] {
                             color: @navbarLinkColor;
                         }
                     }
-                }
-                > li {
-                    >a{
-                        padding-top: 0;
-                    }
+
+					&.active {
+
+						> a {
+							color: @white;
+						}
+					}
                 }
             }
         }
@@ -2689,7 +2710,6 @@ div{
         > h2{
             display: inline-block;
             font-size: @baseFontSize + 6;
-            padding-left: 12px;
 
             a {
                 .arrow_link();
