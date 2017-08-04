@@ -427,15 +427,8 @@ blockquote{
     text-shadow: none;
 
     &.btn-large{
-        min-height: 37px;
         padding-left: 40px;
         padding-right: 40px;
-    }
-    &.btn-small{
-        min-height: 27px;
-    }
-    &.btn-mini{
-        min-height: 25px;
     }
 
     &:hover{
@@ -2280,14 +2273,20 @@ dl.tabs.nav {
     border-right-color: @tabsBackgroundActive;
 }
 
-.nav-list{
-    li{
-        > a{
-            [class*="icon-"], [class^="icon-"]{
-                color: @linkColor;
+.nav-list {
+
+    li {
+
+        > a {
+			text-shadow: none;
+
+            [class*="icon-"],
+			[class^="icon-"]{
+                text-shadow: none;
             }
+
             &:hover,
-            &:focus{
+            &:focus {
                 background-color: @color_five;
                 color: @color_two;
 
@@ -2311,6 +2310,22 @@ dl.tabs.nav {
             }
         }
     }
+
+	> li {
+
+		> a {
+			text-shadow: none;
+		}
+	}
+
+	> .active {
+
+		> a,
+		> a:hover,
+		> a:focus {
+			text-shadow: none;
+		}
+	}
 }
 
 .nav.nav-pills {
