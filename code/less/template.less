@@ -2646,11 +2646,19 @@ div{
 
 }
 
-.blog, .blog-featured {
-	.container-fluid, .no-padding {
-		+ div  {
-			h2:first-child {
-				margin-top: 0;
+.blog,
+.blog-featured {
+
+	.container-fluid,
+	.no-padding {
+
+		+ div {
+
+			h2 {
+
+				&:first-child {
+					margin-top: 0;
+				}
 			}
 		}
 	}
