@@ -462,16 +462,24 @@
     }
     // ______________________________________________________________________________
 
-    #floating{
+    #floating {
         max-width: none;
         padding-top: 15px;
         position: static;
 
-        .jssocialicons-vertical{
-            li{
-                float: left;
-            }
-        }
+		#easy-social-icons {
+
+			.jssocialicons-vertical {
+
+				li {
+					float: left;
+				}
+			}
+		}
+
+		[class*="module"] {
+			float: left;
+		}
     }
     .jssocialicons-vertical{
         .socialicon-templatedesign-16,
