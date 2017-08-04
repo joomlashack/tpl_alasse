@@ -48,7 +48,11 @@ $this->wrightLeadingItemElementsStructure = Array(
 				'title',
 				'article-info',
 				'icons',
+				'legendtop',
 				'content',
+				'legendbottom',
+				'article-info-below',
+				'article-info-split',
 			'/div',
 		'/div',
 	'/div'
@@ -59,7 +63,11 @@ $this->wrightIntroItemElementsStructure = Array(
 	'title',
 	'article-info',
 	'icons',
-	'content'
+    'legendtop',
+	'content',
+    'legendbottom',
+    'article-info-below',
+    'article-info-split'
 );
 
 require_once JPATH_THEMES . '/' . $app->getTemplate() . '/wright/html/overrider.php';

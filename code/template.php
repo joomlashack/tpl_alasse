@@ -54,6 +54,14 @@ defined('_JEXEC') or die('Restricted access');
             </div>
             <?php endif; ?>
 
+            <?php if ($this->countModules('extra')) : ?>
+            <div id="extra">
+                <div class="<?php echo $wrightContainerClass; ?>">
+                    <w:module type="none" name="extra" chrome="wrightxhtml" />
+                </div>
+            </div>
+            <?php endif; ?>
+
             <?php if ($this->countModules('featured')) : ?>
             <div id="featured">
                 <w:module type="none" name="featured" chrome="wrightxhtml" />
