@@ -73,7 +73,7 @@ defined('_JEXEC') or die('Restricted access');
                     :
             ?>
             <div class="full-image">
-                <img src="<?php echo $wrightSingleArticleImage ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
+                <img src="<?php echo $wrightSingleArticleImage ?>" class="<?php echo $WrightBootstrapImagesClass ?>" alt="<?php echo $wrightSingleArticleAlt ?>" />
             </div>
             <?php
                 endif;

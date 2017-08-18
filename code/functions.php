@@ -131,6 +131,9 @@ elseif ($paramOption == 'com_content' && $paramView == 'article')
 			$wrightSingleArticleAlt = $imagesArray->image_fulltext_alt;
 		}
 	}
+
+    // Set image class from template settings
+    $WrightBootstrapImagesClass = $this->params->get( 'wright_bootstrap_images', '' );
 }
 
 $alasseFullWidthBg = ($paramOption == 'com_content' && ($paramView == 'category' && $paramLayout == 'blog') || ($paramView == 'featured'));
