@@ -1,6 +1,6 @@
 <?php
 /**
- * @package   tpl_civic
+ * @package   tpl_alasse
  * @contact   www.joomlashack.com, help@joomlashack.com
  * @copyright 2016 Open Source Training, LLC. All rights reserved
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
@@ -18,8 +18,8 @@ jimport('joomla.filesystem.folder');
 /**
  * Custom installer script
  */
-if (!class_exists('JS_CivicInstallerScript')) {
-    class JS_CivicInstallerScript extends Installer\AbstractScript
+if (!class_exists('JS_AlasseInstallerScript')) {
+    class JS_AlasseInstallerScript extends Installer\AbstractScript
     {
         /**
          * @param string                     $type
