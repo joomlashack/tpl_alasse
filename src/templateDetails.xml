@@ -155,6 +155,12 @@
 		</fields>
 	</config>
 
+	<media destination="tpl_js_alasse" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>images</folder>
+    </media>
+
 	<scriptfile>script.installer.php</scriptfile>
 
 	<updateservers>
