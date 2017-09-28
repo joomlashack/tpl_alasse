@@ -164,16 +164,16 @@
 	<scriptfile>script.installer.php</scriptfile>
 
 	<updateservers>
-        <server type="extension" priority="1" name="Alasse"><![CDATA[https://deploy.ostraining.com/client/update/pro/stable/tpl_js_alasse]]></server>
+        <server type="extension" priority="1" name="Alasse"><![CDATA[https://deploy.ostraining.com/client/update/free/stable/tpl_js_alasse]]></server>
     </updateservers>
 
-    <variant>PRO</variant>
+    <variant>FREE</variant>
 
     <alledia>
         <element>tpl_js_alasse</element>
         <namespace>JS_Alasse</namespace>
         <name>JS Alasse</name>
-        <license>pro</license>
+        <license>free</license>
         <targetplatform>3.*</targetplatform>
 
         <relatedExtensions>
@@ -187,13 +187,6 @@
                 element="ossystem"
                 publish="true"
                 ordering="first">OSSystem</extension>
-
-            <extension
-                type="plugin"
-                group="system"
-                element="osmylicensesmanager"
-                publish="true"
-                ordering="last">OSMyLicensesManager</extension>
         </relatedExtensions>
 
         <include>AllediaFreeDefaultFiles</include>

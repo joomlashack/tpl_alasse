@@ -9,7 +9,7 @@
         "element-short"  : "js_alasse",
         "name"           : "Alasse",
         "client"         : "site",
-        "package-license": "pro",
+        "package-license": "free",
         "target-platform": "3.*"
     },
     "authors"          : [
