@@ -40,15 +40,15 @@
 @color_four:            #272B37;
 @color_five:            #3398D8;
 
-@tabsBackgroundActive : #227FBB;
+@tabsBackgroundActive : darken(desaturate(spin(@color_one, -0.5424), 0.6437), 9.8039);
 
-@bsDocsBorderColor:     #2C97DE;
+@bsDocsBorderColor:     darken(saturate(spin(@color_one, -0.1393), 3.0763), 0.9804);
 
-@btnBackgroundHover: #227FBB;
-@btnBackgroundFocus: #255275;
-@btnColorFocus:      #0087CC;
+@btnBackgroundHover: darken(desaturate(spin(@color_one, -0.5424), 0.6437), 9.8039);
+@btnBackgroundFocus: darken(desaturate(spin(@color_one, 2.1781), 17.9264), 22.9412);
+@btnColorFocus:      darken(saturate(spin(@color_one, -3.7777), 30.1255), 13.1373);
 
-@submenuLinkBackgroundHover:     #255275;
+@submenuLinkBackgroundHover:     darken(desaturate(spin(@color_one, 2.1781), 17.9264), 22.9412);
 
 // Global values
 // --------------------------------------------------
@@ -126,7 +126,7 @@
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #D6EAF8; // for striping
+@tableBackgroundAccent:             lighten(saturate(spin(@color_one, 0.6340), 0.9589), 37.4510); // for striping
 @tableBackgroundHover:              darken(@tableBackgroundAccent, 7%); // for hover
 @tableBorder:                       @color_three; // table and cell border
 
@@ -167,8 +167,8 @@
 
 // Dropdowns
 // -------------------------
-@dropdownBackground:            #2980B9;
-@dropdownBorder:                #2980B9;
+@dropdownBackground:            darken(desaturate(spin(@color_one, -0.3219), 6.1577), 8.8235);
+@dropdownBorder:                darken(desaturate(spin(@color_one, -0.3219), 6.1577), 8.8235);
 @dropdownDividerTop:            #e5e5e5;
 @dropdownDividerBottom:         @white;
 
@@ -176,8 +176,8 @@
 @dropdownLinkColorHover:        @color_two;
 @dropdownLinkColorActive:       @color_two;
 
-@dropdownLinkBackgroundActive:  #236EA1;
-@dropdownLinkBackgroundHover:   #236EA1;
+@dropdownLinkBackgroundActive:  darken(desaturate(spin(@color_one, 0.2139), 5.5888), 14.7059);
+@dropdownLinkBackgroundHover:   darken(desaturate(spin(@color_one, 0.2139), 5.5888), 14.7059);
 
 
 
